@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="noonghunnaabove-ar" format="2">
+  <unicode hex="0658"/>
+  <anchor x="104" y="739" name="top"/>
+  <anchor x="104" y="535" name="_top"/>
+  <outline>
+    <contour>
+      <point x="20" y="809" type="line"/>
+      <point x="20" y="732" type="line" smooth="yes"/>
+      <point x="20" y="680"/>
+      <point x="52" y="647"/>
+      <point x="104" y="647" type="curve" smooth="yes"/>
+      <point x="157" y="647"/>
+      <point x="188" y="676"/>
+      <point x="188" y="727" type="curve" smooth="yes"/>
+      <point x="188" y="809" type="line"/>
+      <point x="148" y="809" type="line"/>
+      <point x="148" y="727" type="line" smooth="yes"/>
+      <point x="148" y="699"/>
+      <point x="135" y="687"/>
+      <point x="104" y="687" type="curve" smooth="yes"/>
+      <point x="75" y="687"/>
+      <point x="60" y="701"/>
+      <point x="60" y="732" type="curve" smooth="yes"/>
+      <point x="60" y="809" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>=20</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>=20</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hah-ar.medi" format="2">
+  <advance width="606"/>
+  <unicode hex="FEA4"/>
+  <anchor x="279" y="460" name="top"/>
+  <anchor x="279" y="0" name="bottom"/>
+  <outline>
+    <contour>
+      <point x="516" y="54" type="line"/>
+      <point x="516" y="200" type="line" smooth="yes"/>
+      <point x="516" y="361"/>
+      <point x="426" y="460"/>
+      <point x="279" y="460" type="curve" smooth="yes"/>
+      <point x="182" y="460"/>
+      <point x="95" y="407"/>
+      <point x="54" y="322" type="curve"/>
+      <point x="104" y="298" type="line"/>
+      <point x="136" y="363"/>
+      <point x="203" y="406"/>
+      <point x="279" y="406" type="curve" smooth="yes"/>
+      <point x="393" y="406"/>
+      <point x="458" y="331"/>
+      <point x="458" y="200" type="curve" smooth="yes"/>
+      <point x="458" y="54" type="line"/>
+      <point x="0" y="54" type="line" smooth="yes"/>
+      <point x="-14" y="54"/>
+      <point x="-25" y="52"/>
+      <point x="-25" y="25" type="curve" smooth="yes"/>
+      <point x="-25" y="1"/>
+      <point x="-14" y="0"/>
+      <point x="0" y="0" type="curve" smooth="yes"/>
+      <point x="606" y="0" type="line"/>
+      <point x="606" y="54" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="middotcat.cap" format="2">
+  <advance width="210"/>
+  <guideline x="114" y="416" angle="90.0" identifier="CgSf1NXqJn"/>
+  <outline>
+    <contour>
+      <point x="78" y="388" type="line"/>
+      <point x="0" y="388" type="line"/>
+      <point x="0" y="316" type="line"/>
+      <point x="78" y="316" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guideline.showMeasurements.CgSf1NXqJn</key>
+      <true/>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hehgoal-ar.init" format="2">
+  <advance width="306"/>
+  <unicode hex="FBA8"/>
+  <anchor x="189" y="450" name="top"/>
+  <anchor x="124" y="-288" name="bottom"/>
+  <outline>
+    <component base="behDotless-ar.init"/>
+    <component base="comma-ar" xOffset="3" yOffset="-281"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>behDotless-ar.init</string>
+      <key>public.markColor</key>
+      <string>0.7843,0.7843,0.7843,1</string>
+    </dict>
+  </lib>
+</glyph>

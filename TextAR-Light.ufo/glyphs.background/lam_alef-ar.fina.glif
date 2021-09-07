@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lam_alef-ar.fina" format="2">
+  <advance width="500"/>
+  <outline>
+    <contour>
+      <point x="578" y="54" type="line"/>
+      <point x="578" y="730" type="line"/>
+      <point x="520" y="730" type="line"/>
+      <point x="520" y="54" type="line"/>
+      <point x="326" y="54" type="line"/>
+      <point x="326" y="573" type="line"/>
+      <point x="268" y="573" type="line"/>
+      <point x="268" y="54" type="line"/>
+      <point x="40" y="54" type="line"/>
+      <point x="40" y="0" type="line"/>
+      <point x="698" y="0" type="line"/>
+      <point x="698" y="54" type="line"/>
+    </contour>
+  </outline>
+</glyph>

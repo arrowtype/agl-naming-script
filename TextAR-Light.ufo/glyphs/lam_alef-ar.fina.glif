@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lam_alef-ar.fina" format="2">
+  <advance width="698"/>
+  <unicode hex="FEFC"/>
+  <anchor x="298" y="0" name="bottom"/>
+  <anchor x="550" y="0" name="bottom_1"/>
+  <anchor x="298" y="573" name="top_2"/>
+  <anchor x="423" y="0" name="caret_1"/>
+  <anchor x="298" y="573" name="top"/>
+  <anchor x="550" y="700" name="top_1"/>
+  <anchor x="298" y="0" name="bottom_2"/>
+  <outline>
+    <contour>
+      <point x="578" y="54" type="line"/>
+      <point x="578" y="730" type="line"/>
+      <point x="520" y="730" type="line"/>
+      <point x="520" y="54" type="line"/>
+      <point x="326" y="54" type="line"/>
+      <point x="326" y="573" type="line"/>
+      <point x="268" y="573" type="line"/>
+      <point x="268" y="54" type="line"/>
+      <point x="40" y="54" type="line"/>
+      <point x="40" y="0" type="line"/>
+      <point x="698" y="0" type="line"/>
+      <point x="698" y="54" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>lam-ar.medi</string>
+    </dict>
+  </lib>
+</glyph>

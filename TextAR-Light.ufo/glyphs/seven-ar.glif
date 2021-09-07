@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven-ar" format="2">
+  <advance width="586"/>
+  <unicode hex="0667"/>
+  <outline>
+    <contour>
+      <point x="263" y="0" type="line"/>
+      <point x="323" y="0" type="line"/>
+      <point x="546" y="627" type="line"/>
+      <point x="485" y="627" type="line"/>
+      <point x="293" y="78" type="line"/>
+      <point x="101" y="627" type="line"/>
+      <point x="40" y="627" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>=|</string>
+    </dict>
+  </lib>
+</glyph>

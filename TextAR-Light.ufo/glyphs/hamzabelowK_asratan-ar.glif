@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hamzabelowKasratan-ar" format="2">
+  <outline>
+    <component base="hamzabelow-ar"/>
+    <component base="kasra-ar" xOffset="-10" yOffset="-237"/>
+    <component base="kasra-ar" xOffset="-10" yOffset="-327"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0.7843,0.7843,0.7843,1</string>
+    </dict>
+  </lib>
+</glyph>

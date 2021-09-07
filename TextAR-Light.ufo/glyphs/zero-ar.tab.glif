@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="zero-ar.tab" format="2">
+  <advance width="600"/>
+  <outline>
+    <contour>
+      <point x="300" y="281" type="line"/>
+      <point x="238" y="220" type="line"/>
+      <point x="300" y="158" type="line"/>
+      <point x="362" y="219" type="line"/>
+    </contour>
+  </outline>
+</glyph>

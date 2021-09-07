@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gaf-ar.medi" format="2">
+  <advance width="584"/>
+  <unicode hex="FB95"/>
+  <anchor x="12" y="657" name="top"/>
+  <outline>
+    <component base="kaf-ar.medi"/>
+    <component base="gafsarkashabove-ar" yOffset="-21"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0.7843,0.7843,0.7843,1</string>
+    </dict>
+  </lib>
+</glyph>

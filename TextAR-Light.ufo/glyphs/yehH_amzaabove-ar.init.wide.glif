@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="yehHamzaabove-ar.init.wide" format="2">
+  <advance width="331"/>
+  <outline>
+    <component base="behDotless-ar.init_wide"/>
+    <component base="hamzaabove-ar" xOffset="49" yOffset="-85"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0.7843,0.7843,0.7843,1</string>
+    </dict>
+  </lib>
+</glyph>

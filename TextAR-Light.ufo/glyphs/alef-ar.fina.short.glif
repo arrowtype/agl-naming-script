@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="alef-ar.fina.short" format="2">
+  <advance width="302"/>
+  <anchor x="119" y="620" name="top"/>
+  <anchor x="119" y="0" name="bottom"/>
+  <outline>
+    <contour>
+      <point x="299" y="0" type="curve" smooth="yes"/>
+      <point x="302" y="0" type="line"/>
+      <point x="302" y="54" type="line"/>
+      <point x="299" y="54" type="line" smooth="yes"/>
+      <point x="201" y="54"/>
+      <point x="148" y="86"/>
+      <point x="148" y="214" type="curve" smooth="yes"/>
+      <point x="148" y="630" type="line"/>
+      <point x="90" y="630" type="line"/>
+      <point x="90" y="214" type="line" smooth="yes"/>
+      <point x="90" y="56"/>
+      <point x="168" y="0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>alef-ar</string>
+    </dict>
+  </lib>
+</glyph>

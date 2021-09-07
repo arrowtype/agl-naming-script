@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="E" format="2">
+  <advance width="676"/>
+  <unicode hex="0045"/>
+  <anchor x="351" y="730" name="aboveUC"/>
+  <anchor x="543" y="-10" name="belowogonek"/>
+  <anchor x="351" y="-30" name="below"/>
+  <outline>
+    <contour>
+      <point x="98" y="700" type="line"/>
+      <point x="98" y="0" type="line"/>
+      <point x="597" y="0" type="line"/>
+      <point x="597" y="51" type="line"/>
+      <point x="160" y="51" type="line"/>
+      <point x="160" y="327" type="line"/>
+      <point x="569" y="327" type="line"/>
+      <point x="569" y="379" type="line"/>
+      <point x="160" y="379" type="line"/>
+      <point x="160" y="649" type="line"/>
+      <point x="597" y="649" type="line"/>
+      <point x="597" y="700" type="line"/>
+    </contour>
+  </outline>
+</glyph>

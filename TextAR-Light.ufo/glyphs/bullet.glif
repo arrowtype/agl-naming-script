@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bullet" format="2">
+  <advance width="429"/>
+  <unicode hex="2022"/>
+  <guideline x="148" y="846" angle="90.0" identifier="6he86Aoa2f"/>
+  <outline>
+    <contour>
+      <point x="329" y="466" type="line"/>
+      <point x="100" y="466" type="line"/>
+      <point x="100" y="241" type="line"/>
+      <point x="329" y="241" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guideline.showMeasurements.6he86Aoa2f</key>
+      <true/>
+    </dict>
+  </lib>
+</glyph>

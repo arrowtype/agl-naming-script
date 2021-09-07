@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="periodcentered.tab" format="2">
+  <advance width="300"/>
+  <guideline x="143" y="841" angle="90.0" identifier="bxK1OQdO1p"/>
+  <outline>
+    <contour>
+      <point x="191" y="395" type="line"/>
+      <point x="109" y="395" type="line"/>
+      <point x="109" y="311" type="line"/>
+      <point x="191" y="311" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guideline.showMeasurements.bxK1OQdO1p</key>
+      <true/>
+    </dict>
+  </lib>
+</glyph>

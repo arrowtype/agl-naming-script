@@ -1,0 +1,2194 @@
+# -----------------------------------
+# INTEL ONE TEXT ARABIC OPENTYPE CODE
+# -----------------------------------
+
+# ----------------
+# Language Systems
+# ----------------
+
+languagesystem DFLT dflt;
+
+languagesystem arab dflt;
+languagesystem arab URD;
+
+languagesystem latn dflt;
+languagesystem latn CAT;
+
+
+# -------
+# Classes
+# -------
+
+# Figures
+@figD   = [zero     one     two     three     four     five     six     seven     eight     nine    ];
+@figTab = [zero.tab one.tab two.tab three.tab four.tab five.tab six.tab seven.tab eight.tab nine.tab];
+
+# Currency Symbols to tabular
+@currD =   [dollar     sterling     yen     Euro];
+@currTab = [dollar.tab sterling.tab yen.tab Euro.tab];
+
+# Figure Punctuation
+@figPxD =   [quotedbl     quotesingle     period     comma     colon     colon.fig    slash     ellipsis     endash     periodcentered     ];
+@figPxTab = [quotedbl.tab quotesingle.tab period.tab comma.tab colon.tab colon.figtab slash.tab twodotleader figuredash periodcentered.tab ]; 
+
+# Arabic/Persian Figures
+@arFigD   = [zero-ar     one-ar     two-ar     three-ar     four-ar     five-ar     six-ar     seven-ar     eight-ar     nine-ar     zero-persian     one-persian     two-persian     three-persian     four-persian     five-persian     six-persian     seven-persian     eight-persian     nine-persian    ];
+@arFigTab = [zero-ar.tab one-ar.tab two-ar.tab three-ar.tab four-ar.tab five-ar.tab six-ar.tab seven-ar.tab eight-ar.tab nine-ar.tab zero-persian.tab one-persian.tab two-persian.tab three-persian.tab four-persian.tab five-persian.tab six-persian.tab seven-persian.tab eight-persian.tab nine-persian.tab];
+
+
+
+# ---------------------------------
+# Glyph Composition / Decomposition
+# ---------------------------------
+
+feature ccmp {
+    lookup ccmp_arab_1 {
+        sub hamzaabove-ar damma-ar by hamzaaboveDamma-ar;
+        sub damma-ar hamzaabove-ar by hamzaaboveDamma-ar;
+        sub hamzaabove-ar dammatan-ar by hamzaaboveDammatan-ar;
+        sub dammatan-ar hamzaabove-ar by hamzaaboveDammatan-ar;
+        sub hamzaabove-ar fatha-ar by hamzaaboveFatha-ar;
+        sub fatha-ar hamzaabove-ar by hamzaaboveFatha-ar;
+        sub hamzaabove-ar fathatan-ar by hamzaaboveFathatan-ar;
+        sub fathatan-ar hamzaabove-ar by hamzaaboveFathatan-ar;
+        sub hamzaabove-ar sukun-ar by hamzaaboveSukun-ar;
+        sub sukun-ar hamzaabove-ar by hamzaaboveSukun-ar;
+        sub hamzabelow-ar kasra-ar by hamzabelowKasra-ar;
+        sub kasra-ar hamzabelow-ar by hamzabelowKasra-ar;
+        sub hamzabelow-ar kasratan-ar by hamzabelowKasratan-ar;
+        sub kasratan-ar hamzabelow-ar by hamzabelowKasratan-ar;
+        sub shadda-ar damma-ar by shaddaDamma-ar;
+        sub damma-ar shadda-ar by shaddaDamma-ar;
+        sub shadda-ar dammatan-ar by shaddaDammatan-ar;
+        sub dammatan-ar shadda-ar by shaddaDammatan-ar;
+        sub shadda-ar fatha-ar by shaddaFatha-ar;
+        sub fatha-ar shadda-ar by shaddaFatha-ar;
+        sub shadda-ar fathatan-ar by shaddaFathatan-ar;
+        sub fathatan-ar shadda-ar by shaddaFathatan-ar;
+        sub shadda-ar kasra-ar by shaddaKasra-ar;
+        sub kasra-ar shadda-ar by shaddaKasra-ar;
+        sub shadda-ar kasratan-ar by shaddaKasratan-ar;
+        sub kasratan-ar shadda-ar by shaddaKasratan-ar;
+    } ccmp_arab_1;
+
+    script arab;
+    lookup ccmp_arab_1;
+
+} ccmp;
+
+
+# ---------------
+# Localized Forms
+# ---------------
+
+feature locl {
+
+    lookup locl_arab_0 {
+        script arab;
+        language URD;
+        sub six-persian by six-ar;
+    } locl_arab_0;
+
+    lookup locl_latn_CAT {
+        script latn;
+        language CAT;
+        sub l periodcentered' l by middotcat;
+        sub L periodcentered' L by middotcat.cap;
+    } locl_latn_CAT;
+
+} locl;
+
+
+# ----------------
+# Positional Forms
+# ----------------
+
+feature init {
+    sub behDotless-ar by behDotless-ar.init;
+    sub beh-ar by beh-ar.init;
+    sub peh-ar by peh-ar.init;
+    sub teh-ar by teh-ar.init;
+    sub theh-ar by theh-ar.init;
+    sub tteh-ar by tteh-ar.init;
+    sub jeem-ar by jeem-ar.init;
+    sub tcheh-ar by tcheh-ar.init;
+    sub hah-ar by hah-ar.init;
+    sub khah-ar by khah-ar.init;
+    sub seen-ar by seen-ar.init;
+    sub sheen-ar by sheen-ar.init;
+    sub sad-ar by sad-ar.init;
+    sub dad-ar by dad-ar.init;
+    sub tah-ar by tah-ar.init;
+    sub zah-ar by zah-ar.init;
+    sub ain-ar by ain-ar.init;
+    sub ghain-ar by ghain-ar.init;
+    sub feh-ar by feh-ar.init;
+    sub veh-ar by veh-ar.init;
+    sub fehDotless-ar by fehDotless-ar.init;
+    sub qaf-ar by qaf-ar.init;
+    sub kaf-ar by kaf-ar.init;
+    sub keheh-ar by keheh-ar.init;
+    sub gaf-ar by gaf-ar.init;
+    sub lam-ar by lam-ar.init;
+    sub meem-ar by meem-ar.init;
+    sub noon-ar by noon-ar.init;
+    sub heh-ar by heh-ar.init;
+    sub hehgoal-ar by hehgoal-ar.init;
+    sub hehDoachashmee-ar by hehDoachashmee-ar.init;
+    sub yeh-ar by yeh-ar.init;
+    sub yehHamzaabove-ar by yehHamzaabove-ar.init;
+    sub yeh-farsi by yeh-farsi.init;
+} init;
+
+feature medi {
+    sub behDotless-ar by behDotless-ar.medi;
+    sub beh-ar by beh-ar.medi;
+    sub peh-ar by peh-ar.medi;
+    sub teh-ar by teh-ar.medi;
+    sub theh-ar by theh-ar.medi;
+    sub tteh-ar by tteh-ar.medi;
+    sub jeem-ar by jeem-ar.medi;
+    sub tcheh-ar by tcheh-ar.medi;
+    sub hah-ar by hah-ar.medi;
+    sub khah-ar by khah-ar.medi;
+    sub seen-ar by seen-ar.medi;
+    sub sheen-ar by sheen-ar.medi;
+    sub sad-ar by sad-ar.medi;
+    sub dad-ar by dad-ar.medi;
+    sub tah-ar by tah-ar.medi;
+    sub zah-ar by zah-ar.medi;
+    sub ain-ar by ain-ar.medi;
+    sub ghain-ar by ghain-ar.medi;
+    sub feh-ar by feh-ar.medi;
+    sub veh-ar by veh-ar.medi;
+    sub fehDotless-ar by fehDotless-ar.medi;
+    sub qaf-ar by qaf-ar.medi;
+    sub kaf-ar by kaf-ar.medi;
+    sub keheh-ar by keheh-ar.medi;
+    sub gaf-ar by gaf-ar.medi;
+    sub lam-ar by lam-ar.medi;
+    sub meem-ar by meem-ar.medi;
+    sub noon-ar by noon-ar.medi;
+    sub heh-ar by heh-ar.medi;
+    sub hehgoal-ar by hehgoal-ar.medi;
+    sub hehDoachashmee-ar by hehDoachashmee-ar.medi;
+    sub yeh-ar by yeh-ar.medi;
+    sub yehHamzaabove-ar by yehHamzaabove-ar.medi;
+    sub yeh-farsi by yeh-farsi.medi;
+} medi;
+
+feature fina {
+    sub alef-ar by alef-ar.fina;
+    sub alefHamzaabove-ar by alefHamzaabove-ar.fina;
+    sub alefHamzabelow-ar by alefHamzabelow-ar.fina;
+    sub alefMadda-ar by alefMadda-ar.fina;
+    sub alefWasla-ar by alefWasla-ar.fina;
+    sub behDotless-ar by behDotless-ar.fina;
+    sub beh-ar by beh-ar.fina;
+    sub peh-ar by peh-ar.fina;
+    sub teh-ar by teh-ar.fina;
+    sub theh-ar by theh-ar.fina;
+    sub tteh-ar by tteh-ar.fina;
+    sub jeem-ar by jeem-ar.fina;
+    sub tcheh-ar by tcheh-ar.fina;
+    sub hah-ar by hah-ar.fina;
+    sub khah-ar by khah-ar.fina;
+    sub dal-ar by dal-ar.fina;
+    sub thal-ar by thal-ar.fina;
+    sub ddal-ar by ddal-ar.fina;
+    sub reh-ar by reh-ar.fina;
+    sub zain-ar by zain-ar.fina;
+    sub rreh-ar by rreh-ar.fina;
+    sub jeh-ar by jeh-ar.fina;
+    sub seen-ar by seen-ar.fina;
+    sub sheen-ar by sheen-ar.fina;
+    sub sad-ar by sad-ar.fina;
+    sub dad-ar by dad-ar.fina;
+    sub tah-ar by tah-ar.fina;
+    sub zah-ar by zah-ar.fina;
+    sub ain-ar by ain-ar.fina;
+    sub ghain-ar by ghain-ar.fina;
+    sub feh-ar by feh-ar.fina;
+    sub veh-ar by veh-ar.fina;
+    sub fehDotless-ar by fehDotless-ar.fina;
+    sub qafDotless-ar by qafDotless-ar.fina;
+    sub qaf-ar by qaf-ar.fina;
+    sub kaf-ar by kaf-ar.fina;
+    sub keheh-ar by keheh-ar.fina;
+    sub gaf-ar by gaf-ar.fina;
+    sub lam-ar by lam-ar.fina;
+    sub meem-ar by meem-ar.fina;
+    sub noon-ar by noon-ar.fina;
+    sub noonghunna-ar by noonghunna-ar.fina;
+    sub heh-ar by heh-ar.fina;
+    sub hehgoal-ar by hehgoal-ar.fina;
+    sub hehgoalHamzaabove-ar by hehgoalHamzaabove-ar.fina;
+    sub hehDoachashmee-ar by hehDoachashmee-ar.fina;
+    sub tehMarbuta-ar by tehMarbuta-ar.fina;
+    sub tehMarbutagoal-ar by tehMarbutagoal-ar.fina;
+    sub waw-ar by waw-ar.fina;
+    sub wawHamzaabove-ar by wawHamzaabove-ar.fina;
+    sub alefMaksura-ar by alefMaksura-ar.fina;
+    sub yeh-ar by yeh-ar.fina;
+    sub yehHamzaabove-ar by yehHamzaabove-ar.fina;
+    sub yeh-farsi by yeh-farsi.fina;
+    sub yehbarree-ar by yehbarree-ar.fina;
+    sub yehbarreeHamzaabove-ar by yehbarreeHamzaabove-ar.fina;
+    sub lam_alef-ar by lam_alef-ar.fina;
+    sub lam_alefHamzaabove-ar by lam_alefHamzaabove-ar.fina;
+    sub lam_alefHamzabelow-ar by lam_alefHamzabelow-ar.fina;
+    sub lam_alefMadda-ar by lam_alefMadda-ar.fina;
+    sub lam_alefWasla-ar by lam_alefWasla-ar.fina;
+} fina;
+
+
+# ------------------
+# Required Ligatures
+# ------------------
+
+feature rlig {
+    lookup rlig_arabic_0 {
+        lookupflag IgnoreMarks RightToLeft;
+        sub lam-ar.init alef-ar.fina by lam_alef-ar;
+        sub lam-ar.medi alef-ar.fina by lam_alef-ar.fina;
+        sub lam-ar.init alefHamzaabove-ar.fina by lam_alefHamzaabove-ar;
+        sub lam-ar.medi alefHamzaabove-ar.fina by lam_alefHamzaabove-ar.fina;
+        sub lam-ar.init alefHamzabelow-ar.fina by lam_alefHamzabelow-ar;
+        sub lam-ar.medi alefHamzabelow-ar.fina by lam_alefHamzabelow-ar.fina;
+        sub lam-ar.init alefMadda-ar.fina by lam_alefMadda-ar;
+        sub lam-ar.medi alefMadda-ar.fina by lam_alefMadda-ar.fina;
+        sub lam-ar.init alefWasla-ar.fina by lam_alefWasla-ar;
+        sub lam-ar.medi alefWasla-ar.fina by lam_alefWasla-ar.fina;
+    } rlig_arabic_0;
+
+    script arab;
+    lookup rlig_arabic_0;
+} rlig;
+
+
+# ---------------------
+# Contextual Alternates
+# ---------------------
+
+feature calt {
+    lookupflag IgnoreMarks RightToLeft;
+
+    lookup teh_wide {
+        sub [teh-ar.medi teh-ar.init theh-ar.medi theh-ar.init qaf-ar.medi qaf-ar.init noon-ar.medi noon-ar.init yehHamzaabove-ar.init yehHamzaabove-ar.medi kaf-ar.init kaf-ar.medi] [teh-ar.medi theh-ar.medi yehHamzaabove-ar.medi tteh-ar.medi]' by [teh-ar.medi.wide theh-ar.medi.wide yehHamzaabove-ar.medi.wide tteh-ar.medi.wide];
+        sub [teh-ar.medi theh-ar.medi teh-ar.init theh-ar.init yehHamzaabove-ar.medi yehHamzaabove-ar.init tteh-ar.medi tteh-ar.init]' [teh-ar.medi theh-ar.medi qaf-ar.medi qaf-ar.fina noon-ar.medi yehHamzaabove-ar.medi alef-ar.fina alef-ar.fina alefHamzaabove-ar.fina alefHamzabelow-ar.fina alefMadda-ar.fina alefWasla-ar.fina kaf-ar.fina lam-ar.medi lam-ar.fina lam_alef-ar.fina lam_alefHamzaabove-ar.fina lam_alefHamzabelow-ar.fina lam_alefMadda-ar.fina] by [teh-ar.medi.wide theh-ar.medi.wide teh-ar.init.wide theh-ar.init.wide yehHamzaabove-ar.medi.wide yehHamzaabove-ar.init.wide tteh-ar.medi.wide tteh-ar.init.wide ];
+        sub [teh-ar.medi.wide theh-ar.medi.wide teh-ar.init.wide theh-ar.init.wide yehHamzaabove-ar.medi.wide yehHamzaabove-ar.init.wide tteh-ar.medi.wide tteh-ar.init.wide] [teh-ar.medi theh-ar.medi yehHamzaabove-ar.medi tteh-ar.medi tteh-ar.init]' by [teh-ar.medi.wide theh-ar.medi.wide yehHamzaabove-ar.medi.wide tteh-ar.medi.wide tteh-ar.init.wide ];
+        sub [alef-ar alef-ar.fina alefHamzaabove-ar alefHamzaabove-ar.fina alefHamzabelow-ar alefHamzabelow-ar.fina alefMadda-ar alefMadda-ar.fina alefWasla-ar alefWasla-ar.fina] [teh-ar.init theh-ar.init yehHamzaabove-ar.init tteh-ar.init]' by [teh-ar.init.wide theh-ar.init.wide yehHamzaabove-ar.init.wide tteh-ar.init.wide];
+    } teh_wide;
+
+    lookup yeh_wide {
+        sub [beh-ar.init yeh-ar.init peh-ar.init beh-ar.medi yeh-ar.medi heh-ar.medi] [yeh-ar.medi peh-ar.medi]' by [yeh-ar.medi.wide peh-ar.medi.wide];
+        sub [yeh-ar.medi yeh-ar.init peh-ar.medi peh-ar.init]' [beh-ar.medi yeh-ar.medi heh-ar.medi ain-ar.fina] by [yeh-ar.medi.wide yeh-ar.init.wide peh-ar.medi.wide peh-ar.init.wide];
+        sub [yeh-ar.medi.wide yeh-ar.init.wide peh-ar.medi peh-ar.init] [yeh-ar.medi peh-ar.medi]' by [yeh-ar.medi.wide peh-ar.medi.wide];
+    } yeh_wide;
+
+} calt;
+
+
+# --------------------
+# Case-Sensitive Forms
+# --------------------
+
+feature case {
+    # Capital version of middotcat
+    sub middotcat by middotcat.cap;
+} case;
+
+
+# --------------
+# Stylistic Sets
+# --------------
+
+# Duplicating locl feature
+feature ss01 { 
+    featureNames {
+        name "Localized Forms (Urdu)"; # Windows English
+        name 1 0 0 "Localized Forms (Urdu)"; # Mac English
+    };
+    lookup UrduSix {
+        sub six-persian by six-ar;
+        sub six-persian.tab by six-ar.tab;
+    } UrduSix;
+} ss01;
+
+feature ss11 {
+    featureNames {
+        name "Raised Colon (Figures Only)"; # Windows English
+        name 1 0 0 "Raised Colon (Figures Only)"; # Mac English
+    };
+    lookup FigureColonContextual {
+        sub @figD colon' @figD by colon.fig;
+        sub @figTab colon.tab' @figTab by colon.figtab;
+    } FigureColonContextual;
+} ss11;
+
+feature ss12 {
+    featureNames {
+        name "Raised Colon (Global)"; # Windows English
+        name 1 0 0 "Raised Colon (Global)"; # Mac English
+    };
+    lookup FigureColon {
+        sub colon by colon.fig;
+        sub colon.tab by colon.figtab;
+    } FigureColon;
+} ss12;
+
+
+# --------------------
+# Stylistic Alternates
+# --------------------
+
+feature salt {
+    lookup UrduSix; #SS01
+    lookup FigureColon; # SS12
+} salt;
+
+
+# ---------------
+# Tabular Figures
+# ---------------
+
+feature tnum { 
+    # Arabic/Persian
+    sub @arFigD by @arFigTab;
+    sub @arFigTab space' @arFigTab by space.tab;
+
+    # Latin
+    sub @figD by @figTab;
+    sub @currD by @currTab;
+
+    @tab = [@figTab @currTab];
+
+    lookup tabPX {
+        sub @tab @figPxD' @tab by @figPxTab;
+
+        sub @tab @figPxD' @figPxD @tab by @figPxTab;
+        sub @tab @figPxTab @figPxD' @tab by @figPxTab;
+
+        sub @tab @figPxD' @figPxD @figPxD @tab by @figPxTab;
+        sub @tab @figPxTab @figPxD' @figPxD @tab by @figPxTab;
+        sub @tab @figPxTab @figPxTab @figPxD' @tab by @figPxTab;
+
+    } tabPX;
+} tnum;
+
+
+
+# --------------------
+# Proportional Figures
+# --------------------
+
+feature pnum {
+    # Arabic/Persian
+    sub @arFigTab by @arFigD;
+    sub space.tab by space;
+
+    # Latin
+    sub @figTab by @figD;
+    sub @currTab by @currD;
+    sub @figPxTab by @figPxD;
+} pnum;
+
+
+
+# -----------
+# Superscript
+# -----------
+
+feature sups {
+    sub [one     two     three     four    ] by [one.sup two.sup three.sup four.sup];
+    sub [one.tab two.tab three.tab four.tab] by [one.sup two.sup three.sup four.sup];
+} sups;
+
+
+# ---------
+# Ligatures
+# ---------
+
+feature liga {
+    sub f i by fi;
+    sub f l by fl;
+} liga;
+
+
+feature kern {
+    
+    @kern1.LC_a = [a aacute acircumflex adieresis agrave aring atilde];
+    @kern1.LC_b = [b p thorn];
+    @kern1.LC_c = [c ccedilla];
+    @kern1.LC_d = [d fl l];
+    @kern1.LC_e = [ae e eacute ecircumflex edieresis egrave oe];
+    @kern1.LC_f = [f];
+    @kern1.LC_i = [fi i iacute icircumflex idieresis igrave j];
+    @kern1.LC_k = [k];
+    @kern1.LC_n = [h m n ntilde];
+    @kern1.LC_o = [o oacute ocircumflex odieresis ograve oslash otilde];
+    @kern1.LC_r = [r];
+    @kern1.LC_s = [s scaron];
+    @kern1.LC_t = [t];
+    @kern1.LC_u = [dotlessi g mu q u uacute ucircumflex udieresis ugrave];
+    @kern1.LC_v = [v y yacute ydieresis];
+    @kern1.LC_w = [w];
+    @kern1.LC_x = [x];
+    @kern1.LC_z = [z zcaron];
+    @kern1.MIX_sup = [asterisk degree four.sup one.sup registered servicemark three.sup trademark two.sup];
+    @kern1.PX_bracketleft = [braceleft bracketleft parenleft];
+    @kern1.PX_colon = [colon semicolon];
+    @kern1.PX_guillemotleft = [guillemetleft guilsinglleft];
+    @kern1.PX_hyphen = [emdash endash guillemetright guilsinglright hyphen];
+    @kern1.PX_period = [comma ellipsis period quotedblbase quotesinglbase];
+    @kern1.PX_quotedbl = [quotedbl quotesingle];
+    @kern1.PX_quoteleft = [quotedblleft quoteleft];
+    @kern1.PX_quoteright = [quotedblright quoteright];
+    @kern1.PX_slash = [slash];
+    @kern1.UC_A = [A Aacute Acircumflex Adieresis Agrave Aring Atilde];
+    @kern1.UC_B = [B];
+    @kern1.UC_C = [C Ccedilla];
+    @kern1.UC_D = [D Eth];
+    @kern1.UC_E = [AE E Eacute Ecircumflex Edieresis Egrave OE];
+    @kern1.UC_G = [G];
+    @kern1.UC_H = [H I Iacute Icircumflex Idieresis Igrave M N Ntilde];
+    @kern1.UC_J = [J];
+    @kern1.UC_K = [K];
+    @kern1.UC_L = [L];
+    @kern1.UC_O = [O Oacute Ocircumflex Odieresis Ograve Oslash Otilde Q];
+    @kern1.UC_R = [R];
+    @kern1.UC_S = [S Scaron];
+    @kern1.UC_T = [T];
+    @kern1.UC_U = [U Uacute Ucircumflex Udieresis Ugrave];
+    @kern1.UC_V = [V];
+    @kern1.UC_W = [W];
+    @kern1.UC_X = [X];
+    @kern1.UC_Y = [Y Yacute Ydieresis];
+    @kern1.UC_Z = [Z Zcaron];
+    @kern1.bahtthai = [bahtthai];
+    @kern1.cent = [cent];
+    @kern1.dollar = [dollar];
+    @kern1.naira = [naira];
+    @kern1.peso = [peso];
+    @kern1.won = [won];
+    @kern2.LC_a = [a aacute acircumflex adieresis ae agrave aring atilde];
+    @kern2.LC_c = [c ccedilla e eacute ecircumflex edieresis egrave];
+    @kern2.LC_d = [d q];
+    @kern2.LC_f = [f fi fl];
+    @kern2.LC_g = [g];
+    @kern2.LC_h = [b h k l thorn];
+    @kern2.LC_i = [i iacute icircumflex idieresis igrave];
+    @kern2.LC_j = [j];
+    @kern2.LC_n = [dotlessi m mu n ntilde p r];
+    @kern2.LC_o = [o oacute ocircumflex odieresis oe ograve oslash otilde];
+    @kern2.LC_s = [s scaron];
+    @kern2.LC_t = [t];
+    @kern2.LC_u = [u uacute ucircumflex udieresis ugrave];
+    @kern2.LC_v = [v y yacute ydieresis];
+    @kern2.LC_w = [w];
+    @kern2.LC_x = [x];
+    @kern2.LC_z = [z zcaron];
+    @kern2.MIX_sup = [asterisk degree four.sup one.sup ordfeminine ordmasculine registered servicemark three.sup trademark two.sup];
+    @kern2.PX_bracketright = [braceright bracketright parenright];
+    @kern2.PX_colon = [colon semicolon];
+    @kern2.PX_guillemotright = [guillemetright guilsinglright];
+    @kern2.PX_hyphen = [emdash endash guillemetleft guilsinglleft hyphen];
+    @kern2.PX_period = [comma ellipsis period quotedblbase quotesinglbase];
+    @kern2.PX_quotedbl = [quotedbl quotesingle];
+    @kern2.PX_quoteleft = [quotedblleft quoteleft];
+    @kern2.PX_quoteright = [quotedblright quoteright];
+    @kern2.PX_slash = [slash];
+    @kern2.UC_A = [A Aacute Acircumflex Adieresis Agrave Aring Atilde];
+    @kern2.UC_Eth = [Eth];
+    @kern2.UC_H = [B D E Eacute Ecircumflex Edieresis Egrave F H I Iacute Icircumflex Idieresis Igrave K L M N Ntilde P R Thorn];
+    @kern2.UC_J = [J];
+    @kern2.UC_O = [C Ccedilla G O Oacute Ocircumflex Odieresis Ograve Oslash Otilde Q];
+    @kern2.UC_S = [S Scaron];
+    @kern2.UC_T = [T];
+    @kern2.UC_U = [U Uacute Ucircumflex Udieresis Ugrave];
+    @kern2.UC_V = [V];
+    @kern2.UC_W = [W];
+    @kern2.UC_X = [X];
+    @kern2.UC_Y = [Y Yacute Ydieresis];
+    @kern2.UC_Z = [Z Zcaron];
+    @kern2.bahtthai = [bahtthai];
+    @kern2.cent = [cent];
+    @kern2.dollar = [dollar];
+    @kern2.naira = [naira];
+    @kern2.peso = [peso];
+    @kern2.won = [won];
+
+    @kern1.alef-mark = [ alefHamzaabove-ar alefHamzaabove-ar.fina alefMadda-ar alefMadda-ar.fina alefWasla-ar alefWasla-ar.fina ];
+    @kern1.eight-ar = [ eight-ar eight-persian ];
+    @kern1.five-ar = [ five-ar five-persian ];
+    @kern1.nine-ar = [ nine-ar ];
+    @kern1.reh = [ reh-ar reh-ar.fina zain-ar zain-ar.fina ];
+    @kern1.seven-ar = [ seven-ar seven-persian ];
+    @kern1.two-ar = [ two-ar three-ar two-persian three-persian four-persian ];
+    @kern1.zero-ar = [ zero-persian ];
+    @kern2.eight-ar = [ eight-ar eight-persian ];
+    @kern2.five-ar = [ five-ar five-persian ];
+    @kern2.nine-ar = [ nine-ar nine-persian ];
+    @kern2.seven-ar = [ seven-ar seven-persian ];
+    @kern2.teh = [ teh-ar.init.wide theh-ar.init.wide tteh-ar.init.wide yehHamzaabove-ar.init.wide ];
+    @kern2.teh-ar.init = [ teh-ar.init theh-ar.init tteh-ar.init rreh-ar ];
+    @kern2.zero-ar = [ zero-persian ];
+
+
+    lookup kern_DFLT {
+
+        pos zero-ar six-ar -70;
+        pos four-ar zero-ar -30;
+
+        pos @kern1.eight-ar @kern2.nine-ar -20;
+        pos @kern1.eight-ar @kern2.seven-ar -20;
+        pos @kern1.eight-ar four-ar -20;
+        pos @kern1.eight-ar six-ar -70;
+        pos @kern1.five-ar @kern2.seven-ar -20;
+        pos @kern1.five-ar six-ar -60;
+        pos @kern1.seven-ar @kern2.eight-ar -20;
+        pos @kern1.seven-ar @kern2.five-ar -20;
+        pos @kern1.seven-ar four-ar -20;
+        pos @kern1.seven-ar zero-ar -40;
+        pos @kern1.two-ar @kern2.eight-ar -60;
+        pos @kern1.two-ar @kern2.five-ar -20;
+        pos @kern1.two-ar @kern2.nine-ar 30;
+        pos @kern1.two-ar @kern2.seven-ar 30;
+        pos @kern1.two-ar four-ar -20;
+        pos @kern1.two-ar six-ar 30;
+        pos @kern1.two-ar zero-ar -60;
+        pos zero-ar @kern2.seven-ar -40;
+
+        # Latin glyph, glyph
+        pos F AE -85;
+        pos F OE -5;
+        pos F ampersand -15;
+        pos F exclam 5;
+        pos P AE -105;
+        pos P OE 5;
+        pos P ampersand -30;
+        pos P at -10;
+        pos P question 20;
+        pos Thorn AE -70;
+        pos Thorn OE 5;
+        pos ampersand AE -40;
+        pos at AE -80;
+        pos dong four -10;
+        pos dong six -10;
+        pos eight one -5;
+        pos eight uni20BD 10;
+        pos eight yen -10;
+        pos five five -10;
+        pos five four 5;
+        pos five nine -10;
+        pos five one -10;
+        pos five percent -20;
+        pos five seven -20;
+        pos five two -5;
+        pos five yen -10;
+        pos four eight 5;
+        pos four nine -20;
+        pos four one -15;
+        pos four percent -15;
+        pos four seven -20;
+        pos four six 5;
+        pos four three 5;
+        pos four uni20BA 10;
+        pos four yen -10;
+        pos nine dong -5;
+        pos nine four -10;
+        pos nine numbersign -5;
+        pos nine six -15;
+        pos nine sterling -5;
+        pos nine yen -10;
+        pos numbersign nine 5;
+        pos numbersign seven 10;
+        pos seven Euro -10;
+        pos seven dong -35;
+        pos seven five -10;
+        pos seven four -60;
+        pos seven numbersign -20;
+        pos seven one 5;
+        pos seven seven 10;
+        pos seven six -35;
+        pos seven sterling -10;
+        pos seven three -10;
+        pos seven two -5;
+        pos seven zero -10;
+        pos six four 5;
+        pos six one -15;
+        pos six percent -15;
+        pos six seven -10;
+        pos six yen -10;
+        pos three Euro 5;
+        pos three yen -10;
+        pos two six -5;
+        pos two yen -10;
+        pos uni20B9 four -15;
+        pos uni20B9 one 10;
+        pos uni20BA nine -10;
+        pos uni20BA one -15;
+        pos uni20BA seven -30;
+        pos uni20BA six 5;
+        pos uni20BA two -15;
+        pos uni20BD four -20;
+        pos uni20BD nine 15;
+        pos uni20BD one 5;
+        pos uni20BD seven 5;
+        pos uni20BD six -10;
+        pos yen eight -10;
+        pos yen five -10;
+        pos yen four -20;
+        pos yen nine -10;
+        pos yen one 10;
+        pos yen seven 10;
+        pos yen six -20;
+        pos yen three -15;
+        pos yen two -10;
+        pos yen zero -10;
+        pos zero Euro 5;
+        pos zero seven -5;
+        pos zero two -5;
+        pos zero yen -10;
+
+        # glyph, group exceptions
+        enum pos g [j] 10;
+        enum pos q [j] 40;
+
+        # glyph, group
+        pos F @kern2.LC_a -25;
+        pos F @kern2.LC_c -10;
+        pos F @kern2.LC_d -10;
+        pos F @kern2.LC_g -10;
+        pos F @kern2.LC_n -5;
+        pos F @kern2.LC_o -10;
+        pos F @kern2.LC_s -15;
+        pos F @kern2.LC_u -5;
+        pos F @kern2.LC_v -5;
+        pos F @kern2.LC_w -5;
+        pos F @kern2.LC_x -15;
+        pos F @kern2.LC_z -15;
+        pos F @kern2.PX_period -50;
+        pos F @kern2.PX_slash -40;
+        pos F @kern2.UC_A -75;
+        pos F @kern2.UC_J -50;
+        pos F @kern2.UC_O -5;
+        pos F @kern2.UC_S -20;
+        pos F @kern2.UC_X -5;
+        pos P @kern2.LC_a -15;
+        pos P @kern2.LC_c -15;
+        pos P @kern2.LC_d -15;
+        pos P @kern2.LC_f 20;
+        pos P @kern2.LC_g -15;
+        pos P @kern2.LC_o -15;
+        pos P @kern2.LC_s -10;
+        pos P @kern2.LC_t 25;
+        pos P @kern2.LC_v 10;
+        pos P @kern2.MIX_sup 5;
+        pos P @kern2.PX_bracketright -20;
+        pos P @kern2.PX_guillemotright 5;
+        pos P @kern2.PX_period -75;
+        pos P @kern2.PX_quoteleft 20;
+        pos P @kern2.PX_slash -45;
+        pos P @kern2.UC_A -80;
+        pos P @kern2.UC_J -55;
+        pos P @kern2.UC_O 5;
+        pos P @kern2.UC_V -5;
+        pos P @kern2.UC_X -25;
+        pos P @kern2.UC_Y -10;
+        pos P @kern2.UC_Z -10;
+        pos Thorn @kern2.MIX_sup -10;
+        pos Thorn @kern2.PX_bracketright -30;
+        pos Thorn @kern2.PX_hyphen 10;
+        pos Thorn @kern2.PX_period -20;
+        pos Thorn @kern2.UC_A -40;
+        pos Thorn @kern2.UC_O 5;
+        pos Thorn @kern2.UC_T -45;
+        pos Thorn @kern2.UC_V -35;
+        pos Thorn @kern2.UC_W -10;
+        pos Thorn @kern2.UC_X -70;
+        pos Thorn @kern2.UC_Y -65;
+        pos Thorn @kern2.UC_Z -30;
+        pos ampersand @kern2.LC_c -10;
+        pos ampersand @kern2.LC_d -10;
+        pos ampersand @kern2.LC_f -20;
+        pos ampersand @kern2.LC_o -10;
+        pos ampersand @kern2.LC_t -10;
+        pos ampersand @kern2.LC_v -35;
+        pos ampersand @kern2.LC_w -20;
+        pos ampersand @kern2.LC_x -20;
+        pos ampersand @kern2.UC_A -10;
+        pos ampersand @kern2.UC_S -10;
+        pos ampersand @kern2.UC_T -75;
+        pos ampersand @kern2.UC_U -5;
+        pos ampersand @kern2.UC_V -65;
+        pos ampersand @kern2.UC_W -30;
+        pos ampersand @kern2.UC_X -20;
+        pos ampersand @kern2.UC_Y -85;
+        pos at @kern2.LC_v -5;
+        pos at @kern2.LC_w -10;
+        pos at @kern2.LC_x -10;
+        pos at @kern2.LC_z -15;
+        pos at @kern2.UC_A -60;
+        pos at @kern2.UC_T -10;
+        pos at @kern2.UC_V -30;
+        pos at @kern2.UC_W -20;
+        pos at @kern2.UC_X -50;
+        pos at @kern2.UC_Y -40;
+        pos at @kern2.UC_Z -15;
+        pos eight @kern2.MIX_sup -10;
+        pos eight @kern2.PX_quotedbl -10;
+        pos eth @kern2.LC_g 5;
+        pos eth @kern2.LC_v -10;
+        pos eth @kern2.LC_w -5;
+        pos eth @kern2.LC_x -20;
+        pos eth @kern2.MIX_sup -15;
+        pos eth @kern2.PX_bracketright -20;
+        pos eth @kern2.PX_quoteright -10;
+        pos five @kern2.MIX_sup -25;
+        pos five @kern2.PX_hyphen 5;
+        pos five @kern2.PX_period -5;
+        pos five @kern2.PX_quotedbl -30;
+        pos four @kern2.MIX_sup -30;
+        pos four @kern2.PX_bracketright -5;
+        pos four @kern2.PX_quotedbl -40;
+        pos four @kern2.cent 10;
+        pos germandbls @kern2.LC_v -10;
+        pos germandbls @kern2.LC_x -15;
+        pos germandbls @kern2.MIX_sup -10;
+        pos germandbls @kern2.PX_bracketright -10;
+        pos nine @kern2.PX_bracketright -10;
+        pos nine @kern2.PX_period -35;
+        pos nine @kern2.PX_slash -15;
+        pos percent @kern2.MIX_sup -40;
+        pos question @kern2.PX_bracketright -10;
+        pos question @kern2.PX_hyphen -10;
+        pos question @kern2.PX_quoteleft 15;
+        pos question @kern2.PX_quoteright 15;
+        pos questiondown @kern2.PX_quoteleft -50;
+        pos questiondown @kern2.PX_quoteright -50;
+        pos questiondown @kern2.UC_J 10;
+        pos questiondown @kern2.UC_T -70;
+        pos questiondown @kern2.UC_V -60;
+        pos questiondown @kern2.UC_W -20;
+        pos questiondown @kern2.UC_X -20;
+        pos questiondown @kern2.UC_Y -70;
+        pos seven @kern2.PX_colon -5;
+        pos seven @kern2.PX_hyphen -25;
+        pos seven @kern2.PX_period -50;
+        pos seven @kern2.PX_slash -40;
+        pos seven @kern2.cent -30;
+        pos six @kern2.MIX_sup -20;
+        pos six @kern2.PX_bracketright -10;
+        pos six @kern2.PX_hyphen 5;
+        pos six @kern2.PX_quotedbl -25;
+        pos space @kern2.UC_J -10;
+        pos space @kern2.UC_T -10;
+        pos space @kern2.UC_Y -15;
+        pos three @kern2.MIX_sup -5;
+        pos three @kern2.PX_bracketright -5;
+        pos three @kern2.PX_quotedbl -10;
+        pos two @kern2.MIX_sup -10;
+        pos two @kern2.PX_hyphen -15;
+        pos two @kern2.PX_quotedbl -15;
+        pos two @kern2.cent -5;
+        pos uni1E9E @kern2.PX_quoteleft -20;
+        pos uni1E9E @kern2.PX_quoteright -15;
+        pos uni1E9E @kern2.UC_A -15;
+        pos uni1E9E @kern2.UC_T -25;
+        pos uni1E9E @kern2.UC_U -5;
+        pos uni1E9E @kern2.UC_V -30;
+        pos uni1E9E @kern2.UC_W -15;
+        pos uni1E9E @kern2.UC_X -25;
+        pos uni1E9E @kern2.UC_Y -50;
+        pos zero @kern2.MIX_sup -10;
+        pos zero @kern2.PX_bracketright -10;
+        pos zero @kern2.PX_hyphen 5;
+        pos zero @kern2.PX_period -15;
+        pos zero @kern2.PX_quotedbl -10;
+
+        # group, glyph
+        pos @kern1.LC_a question -20;
+        pos @kern1.LC_b question -35;
+        pos @kern1.LC_c ampersand 10;
+        pos @kern1.LC_c question -5;
+        pos @kern1.LC_e ampersand 10;
+        pos @kern1.LC_e question -30;
+        pos @kern1.LC_f OE 5;
+        pos @kern1.LC_f ampersand -15;
+        pos @kern1.LC_f eth -20;
+        pos @kern1.LC_f exclam 5;
+        pos @kern1.LC_f question 25;
+        pos @kern1.LC_k ampersand -10;
+        pos @kern1.LC_k at -20;
+        pos @kern1.LC_k eth -25;
+        pos @kern1.LC_k question 20;
+        pos @kern1.LC_n question -15;
+        pos @kern1.LC_o question -35;
+        pos @kern1.LC_r OE 10;
+        pos @kern1.LC_r ampersand -10;
+        pos @kern1.LC_r eth -20;
+        pos @kern1.LC_r question 10;
+        pos @kern1.LC_s question -10;
+        pos @kern1.LC_t OE 10;
+        pos @kern1.LC_t eth -5;
+        pos @kern1.LC_v ampersand -20;
+        pos @kern1.LC_v at -20;
+        pos @kern1.LC_v eth -30;
+        pos @kern1.LC_w OE 5;
+        pos @kern1.LC_w ampersand -15;
+        pos @kern1.LC_w at -10;
+        pos @kern1.LC_w eth -25;
+        pos @kern1.LC_x OE -5;
+        pos @kern1.LC_x ampersand -15;
+        pos @kern1.LC_x at -30;
+        pos @kern1.LC_x eth -30;
+        pos @kern1.LC_z at -15;
+        pos @kern1.MIX_sup AE -100;
+        pos @kern1.MIX_sup OE -15;
+        pos @kern1.MIX_sup six -10;
+        pos @kern1.MIX_sup zero -10;
+        pos @kern1.PX_bracketleft OE -25;
+        pos @kern1.PX_bracketleft four -30;
+        pos @kern1.PX_bracketleft nine -10;
+        pos @kern1.PX_bracketleft question -30;
+        pos @kern1.PX_bracketleft questiondown -20;
+        pos @kern1.PX_bracketleft six -10;
+        pos @kern1.PX_bracketleft three -5;
+        pos @kern1.PX_bracketleft zero -10;
+        pos @kern1.PX_colon seven -10;
+        pos @kern1.PX_guillemotleft AE -15;
+        pos @kern1.PX_hyphen AE -50;
+        pos @kern1.PX_hyphen OE 5;
+        pos @kern1.PX_hyphen four 5;
+        pos @kern1.PX_hyphen one -10;
+        pos @kern1.PX_hyphen seven -35;
+        pos @kern1.PX_hyphen two -20;
+        pos @kern1.PX_hyphen zero 5;
+        pos @kern1.PX_period OE -25;
+        pos @kern1.PX_period nine -15;
+        pos @kern1.PX_period one -30;
+        pos @kern1.PX_period question -70;
+        pos @kern1.PX_period seven -10;
+        pos @kern1.PX_period two 5;
+        pos @kern1.PX_period zero -15;
+        pos @kern1.PX_quotedbl eight -10;
+        pos @kern1.PX_quotedbl five -10;
+        pos @kern1.PX_quotedbl four -65;
+        pos @kern1.PX_quotedbl nine -5;
+        pos @kern1.PX_quotedbl six -35;
+        pos @kern1.PX_quotedbl three -10;
+        pos @kern1.PX_quotedbl two -5;
+        pos @kern1.PX_quotedbl zero -20;
+        pos @kern1.PX_quoteleft AE -110;
+        pos @kern1.PX_quoteleft OE -30;
+        pos @kern1.PX_quoteleft questiondown -60;
+        pos @kern1.PX_quoteright AE -110;
+        pos @kern1.PX_quoteright OE -45;
+        pos @kern1.PX_quoteright question -15;
+        pos @kern1.PX_quoteright questiondown -50;
+        pos @kern1.PX_slash AE -90;
+        pos @kern1.PX_slash OE -10;
+        pos @kern1.PX_slash four -20;
+        pos @kern1.PX_slash one 20;
+        pos @kern1.PX_slash seven 15;
+        pos @kern1.PX_slash six -15;
+        pos @kern1.PX_slash two -5;
+        pos @kern1.UC_A AE -60;
+        pos @kern1.UC_A OE -45;
+        pos @kern1.UC_A ampersand -10;
+        pos @kern1.UC_A at -5;
+        pos @kern1.UC_A eth -15;
+        pos @kern1.UC_A question -50;
+        pos @kern1.UC_B AE -15;
+        pos @kern1.UC_B ampersand 10;
+        pos @kern1.UC_C OE -10;
+        pos @kern1.UC_C ampersand 5;
+        pos @kern1.UC_C at -10;
+        pos @kern1.UC_D AE -55;
+        pos @kern1.UC_E OE -10;
+        pos @kern1.UC_E ampersand -5;
+        pos @kern1.UC_E at -5;
+        pos @kern1.UC_G AE -50;
+        pos @kern1.UC_G ampersand 10;
+        pos @kern1.UC_G question -10;
+        pos @kern1.UC_J AE -35;
+        pos @kern1.UC_K AE -80;
+        pos @kern1.UC_K OE -55;
+        pos @kern1.UC_K ampersand -30;
+        pos @kern1.UC_K at -55;
+        pos @kern1.UC_K eth -45;
+        pos @kern1.UC_K question -40;
+        pos @kern1.UC_L OE -30;
+        pos @kern1.UC_L ampersand 10;
+        pos @kern1.UC_L at -15;
+        pos @kern1.UC_L middotcat.cap -210;
+        pos @kern1.UC_L question -60;
+        pos @kern1.UC_L space -10;
+        pos @kern1.UC_O AE -50;
+        pos @kern1.UC_O ampersand 5;
+        pos @kern1.UC_R AE -40;
+        pos @kern1.UC_R OE -10;
+        pos @kern1.UC_R ampersand -10;
+        pos @kern1.UC_R eth -15;
+        pos @kern1.UC_R question 10;
+        pos @kern1.UC_S AE -25;
+        pos @kern1.UC_S OE -5;
+        pos @kern1.UC_S ampersand 5;
+        pos @kern1.UC_S question -10;
+        pos @kern1.UC_T AE -100;
+        pos @kern1.UC_T OE -35;
+        pos @kern1.UC_T ampersand -60;
+        pos @kern1.UC_T at -40;
+        pos @kern1.UC_T germandbls -10;
+        pos @kern1.UC_T space -10;
+        pos @kern1.UC_T uni1E9E -15;
+        pos @kern1.UC_U AE -50;
+        pos @kern1.UC_V AE -120;
+        pos @kern1.UC_V OE -45;
+        pos @kern1.UC_V ampersand -50;
+        pos @kern1.UC_V at -50;
+        pos @kern1.UC_V eth -60;
+        pos @kern1.UC_V question -15;
+        pos @kern1.UC_V uni1E9E -35;
+        pos @kern1.UC_W AE -70;
+        pos @kern1.UC_W OE -20;
+        pos @kern1.UC_W ampersand -20;
+        pos @kern1.UC_W at -40;
+        pos @kern1.UC_W eth -50;
+        pos @kern1.UC_W question -5;
+        pos @kern1.UC_W uni1E9E -10;
+        pos @kern1.UC_X AE -65;
+        pos @kern1.UC_X OE -50;
+        pos @kern1.UC_X ampersand -30;
+        pos @kern1.UC_X at -55;
+        pos @kern1.UC_X eth -35;
+        pos @kern1.UC_X question -40;
+        pos @kern1.UC_Y AE -130;
+        pos @kern1.UC_Y OE -60;
+        pos @kern1.UC_Y ampersand -80;
+        pos @kern1.UC_Y at -70;
+        pos @kern1.UC_Y eth -75;
+        pos @kern1.UC_Y germandbls -45;
+        pos @kern1.UC_Y question -20;
+        pos @kern1.UC_Y space -15;
+        pos @kern1.UC_Y uni1E9E -35;
+        pos @kern1.UC_Z OE -30;
+        pos @kern1.UC_Z at -15;
+        pos @kern1.peso four -25;
+        pos @kern1.peso nine 5;
+
+        # group, group
+        pos @kern1.LC_a @kern2.LC_f -5;
+        pos @kern1.LC_a @kern2.LC_t -5;
+        pos @kern1.LC_a @kern2.LC_v -15;
+        pos @kern1.LC_a @kern2.LC_w -15;
+        pos @kern1.LC_a @kern2.MIX_sup -30;
+        pos @kern1.LC_a @kern2.PX_quoteleft -15;
+        pos @kern1.LC_a @kern2.PX_quoteright -15;
+        pos @kern1.LC_a @kern2.UC_J -5;
+        pos @kern1.LC_a @kern2.UC_T -75;
+        pos @kern1.LC_a @kern2.UC_V -50;
+        pos @kern1.LC_a @kern2.UC_W -25;
+        pos @kern1.LC_a @kern2.UC_Y -70;
+        pos @kern1.LC_b @kern2.LC_f -10;
+        pos @kern1.LC_b @kern2.LC_s -5;
+        pos @kern1.LC_b @kern2.LC_t -5;
+        pos @kern1.LC_b @kern2.LC_v -25;
+        pos @kern1.LC_b @kern2.LC_w -20;
+        pos @kern1.LC_b @kern2.LC_x -30;
+        pos @kern1.LC_b @kern2.LC_z -15;
+        pos @kern1.LC_b @kern2.MIX_sup -30;
+        pos @kern1.LC_b @kern2.PX_bracketright -30;
+        pos @kern1.LC_b @kern2.PX_hyphen 10;
+        pos @kern1.LC_b @kern2.PX_period -10;
+        pos @kern1.LC_b @kern2.PX_quoteleft -25;
+        pos @kern1.LC_b @kern2.PX_quoteright -15;
+        pos @kern1.LC_b @kern2.PX_slash -10;
+        pos @kern1.LC_b @kern2.UC_A -10;
+        pos @kern1.LC_b @kern2.UC_J 5;
+        pos @kern1.LC_b @kern2.UC_S -5;
+        pos @kern1.LC_b @kern2.UC_T -95;
+        pos @kern1.LC_b @kern2.UC_V -55;
+        pos @kern1.LC_b @kern2.UC_W -35;
+        pos @kern1.LC_b @kern2.UC_X -25;
+        pos @kern1.LC_b @kern2.UC_Y -85;
+        pos @kern1.LC_c @kern2.LC_c -5;
+        pos @kern1.LC_c @kern2.LC_d -5;
+        pos @kern1.LC_c @kern2.LC_g -5;
+        pos @kern1.LC_c @kern2.LC_o -5;
+        pos @kern1.LC_c @kern2.LC_s -5;
+        pos @kern1.LC_c @kern2.LC_v -15;
+        pos @kern1.LC_c @kern2.LC_w -10;
+        pos @kern1.LC_c @kern2.LC_x -5;
+        pos @kern1.LC_c @kern2.LC_z 10;
+        pos @kern1.LC_c @kern2.MIX_sup -15;
+        pos @kern1.LC_c @kern2.PX_bracketright -25;
+        pos @kern1.LC_c @kern2.PX_quoteleft -5;
+        pos @kern1.LC_c @kern2.PX_quoteright -5;
+        pos @kern1.LC_c @kern2.UC_A -5;
+        pos @kern1.LC_c @kern2.UC_T -90;
+        pos @kern1.LC_c @kern2.UC_V -55;
+        pos @kern1.LC_c @kern2.UC_W -30;
+        pos @kern1.LC_c @kern2.UC_X -25;
+        pos @kern1.LC_c @kern2.UC_Y -85;
+        pos @kern1.LC_e @kern2.LC_f -5;
+        pos @kern1.LC_e @kern2.LC_t -5;
+        pos @kern1.LC_e @kern2.LC_v -20;
+        pos @kern1.LC_e @kern2.LC_w -5;
+        pos @kern1.LC_e @kern2.LC_x -20;
+        pos @kern1.LC_e @kern2.LC_z 5;
+        pos @kern1.LC_e @kern2.MIX_sup -20;
+        pos @kern1.LC_e @kern2.PX_bracketright -25;
+        pos @kern1.LC_e @kern2.PX_hyphen 10;
+        pos @kern1.LC_e @kern2.PX_period -5;
+        pos @kern1.LC_e @kern2.PX_quoteleft -15;
+        pos @kern1.LC_e @kern2.PX_quoteright -15;
+        pos @kern1.LC_e @kern2.UC_A -10;
+        pos @kern1.LC_e @kern2.UC_T -90;
+        pos @kern1.LC_e @kern2.UC_V -55;
+        pos @kern1.LC_e @kern2.UC_W -35;
+        pos @kern1.LC_e @kern2.UC_X -30;
+        pos @kern1.LC_e @kern2.UC_Y -85;
+        pos @kern1.LC_f @kern2.LC_a -20;
+        pos @kern1.LC_f @kern2.LC_c -10;
+        pos @kern1.LC_f @kern2.LC_d -10;
+        pos @kern1.LC_f @kern2.LC_f -20;
+        pos @kern1.LC_f @kern2.LC_g -5;
+        pos @kern1.LC_f @kern2.LC_o -10;
+        pos @kern1.LC_f @kern2.LC_x -5;
+        pos @kern1.LC_f @kern2.MIX_sup 15;
+        pos @kern1.LC_f @kern2.PX_period -45;
+        pos @kern1.LC_f @kern2.PX_quoteleft 35;
+        pos @kern1.LC_f @kern2.PX_quoteright 20;
+        pos @kern1.LC_f @kern2.PX_slash -25;
+        pos @kern1.LC_f @kern2.UC_A -25;
+        pos @kern1.LC_f @kern2.UC_J -25;
+        pos @kern1.LC_f @kern2.UC_O 5;
+        pos @kern1.LC_f @kern2.UC_T 5;
+        pos @kern1.LC_f @kern2.UC_X -10;
+        pos @kern1.LC_f @kern2.UC_Z 5;
+        pos @kern1.LC_k @kern2.LC_a -10;
+        pos @kern1.LC_k @kern2.LC_c -25;
+        pos @kern1.LC_k @kern2.LC_d -25;
+        pos @kern1.LC_k @kern2.LC_g -30;
+        pos @kern1.LC_k @kern2.LC_o -25;
+        pos @kern1.LC_k @kern2.LC_v -20;
+        pos @kern1.LC_k @kern2.LC_w -15;
+        pos @kern1.LC_k @kern2.LC_z 10;
+        pos @kern1.LC_k @kern2.PX_hyphen -30;
+        pos @kern1.LC_k @kern2.PX_quoteleft 10;
+        pos @kern1.LC_k @kern2.PX_quoteright 20;
+        pos @kern1.LC_k @kern2.UC_A -25;
+        pos @kern1.LC_k @kern2.UC_J -25;
+        pos @kern1.LC_k @kern2.UC_T -35;
+        pos @kern1.LC_k @kern2.UC_V -30;
+        pos @kern1.LC_k @kern2.UC_W -15;
+        pos @kern1.LC_k @kern2.UC_X -25;
+        pos @kern1.LC_k @kern2.UC_Y -55;
+        pos @kern1.LC_n @kern2.LC_v -20;
+        pos @kern1.LC_n @kern2.LC_w -15;
+        pos @kern1.LC_n @kern2.MIX_sup -20;
+        pos @kern1.LC_n @kern2.PX_quoteleft -25;
+        pos @kern1.LC_n @kern2.PX_quoteright -35;
+        pos @kern1.LC_n @kern2.UC_T -75;
+        pos @kern1.LC_n @kern2.UC_V -50;
+        pos @kern1.LC_n @kern2.UC_W -25;
+        pos @kern1.LC_n @kern2.UC_Y -70;
+        pos @kern1.LC_o @kern2.LC_f -10;
+        pos @kern1.LC_o @kern2.LC_s -5;
+        pos @kern1.LC_o @kern2.LC_t -5;
+        pos @kern1.LC_o @kern2.LC_v -25;
+        pos @kern1.LC_o @kern2.LC_w -20;
+        pos @kern1.LC_o @kern2.LC_x -30;
+        pos @kern1.LC_o @kern2.LC_z -15;
+        pos @kern1.LC_o @kern2.MIX_sup -30;
+        pos @kern1.LC_o @kern2.PX_bracketright -30;
+        pos @kern1.LC_o @kern2.PX_hyphen 10;
+        pos @kern1.LC_o @kern2.PX_period -10;
+        pos @kern1.LC_o @kern2.PX_quoteleft -25;
+        pos @kern1.LC_o @kern2.PX_quoteright -15;
+        pos @kern1.LC_o @kern2.PX_slash -10;
+        pos @kern1.LC_o @kern2.UC_A -10;
+        pos @kern1.LC_o @kern2.UC_J 5;
+        pos @kern1.LC_o @kern2.UC_S -5;
+        pos @kern1.LC_o @kern2.UC_T -95;
+        pos @kern1.LC_o @kern2.UC_V -55;
+        pos @kern1.LC_o @kern2.UC_W -35;
+        pos @kern1.LC_o @kern2.UC_X -25;
+        pos @kern1.LC_o @kern2.UC_Y -85;
+        pos @kern1.LC_r @kern2.LC_a -20;
+        pos @kern1.LC_r @kern2.LC_c -15;
+        pos @kern1.LC_r @kern2.LC_d -15;
+        pos @kern1.LC_r @kern2.LC_g -20;
+        pos @kern1.LC_r @kern2.LC_o -15;
+        pos @kern1.LC_r @kern2.LC_s -5;
+        pos @kern1.LC_r @kern2.LC_x -5;
+        pos @kern1.LC_r @kern2.PX_bracketright -20;
+        pos @kern1.LC_r @kern2.PX_guillemotright 5;
+        pos @kern1.LC_r @kern2.PX_hyphen -10;
+        pos @kern1.LC_r @kern2.PX_period -60;
+        pos @kern1.LC_r @kern2.PX_quoteleft 15;
+        pos @kern1.LC_r @kern2.PX_quoteright 20;
+        pos @kern1.LC_r @kern2.PX_slash -15;
+        pos @kern1.LC_r @kern2.UC_A -40;
+        pos @kern1.LC_r @kern2.UC_J -30;
+        pos @kern1.LC_r @kern2.UC_O 10;
+        pos @kern1.LC_r @kern2.UC_T -30;
+        pos @kern1.LC_r @kern2.UC_V -20;
+        pos @kern1.LC_r @kern2.UC_W -15;
+        pos @kern1.LC_r @kern2.UC_X -30;
+        pos @kern1.LC_r @kern2.UC_Y -55;
+        pos @kern1.LC_r @kern2.UC_Z -15;
+        pos @kern1.LC_s @kern2.LC_f -5;
+        pos @kern1.LC_s @kern2.LC_t -5;
+        pos @kern1.LC_s @kern2.LC_v -15;
+        pos @kern1.LC_s @kern2.LC_w -15;
+        pos @kern1.LC_s @kern2.LC_x -15;
+        pos @kern1.LC_s @kern2.MIX_sup -10;
+        pos @kern1.LC_s @kern2.PX_bracketright -10;
+        pos @kern1.LC_s @kern2.PX_hyphen 10;
+        pos @kern1.LC_s @kern2.PX_quoteleft -10;
+        pos @kern1.LC_s @kern2.PX_quoteright -5;
+        pos @kern1.LC_s @kern2.UC_T -55;
+        pos @kern1.LC_s @kern2.UC_V -40;
+        pos @kern1.LC_s @kern2.UC_W -20;
+        pos @kern1.LC_s @kern2.UC_X -10;
+        pos @kern1.LC_s @kern2.UC_Y -85;
+        pos @kern1.LC_t @kern2.LC_a 5;
+        pos @kern1.LC_t @kern2.LC_c -10;
+        pos @kern1.LC_t @kern2.LC_d -10;
+        pos @kern1.LC_t @kern2.LC_g -10;
+        pos @kern1.LC_t @kern2.LC_o -10;
+        pos @kern1.LC_t @kern2.PX_colon 10;
+        pos @kern1.LC_t @kern2.PX_quoteleft 10;
+        pos @kern1.LC_t @kern2.PX_quoteright 10;
+        pos @kern1.LC_t @kern2.PX_slash 15;
+        pos @kern1.LC_t @kern2.UC_J -10;
+        pos @kern1.LC_t @kern2.UC_O 10;
+        pos @kern1.LC_t @kern2.UC_S 5;
+        pos @kern1.LC_t @kern2.UC_T -5;
+        pos @kern1.LC_t @kern2.UC_V -15;
+        pos @kern1.LC_t @kern2.UC_W -5;
+        pos @kern1.LC_t @kern2.UC_X -10;
+        pos @kern1.LC_t @kern2.UC_Y -55;
+        pos @kern1.LC_t @kern2.UC_Z -5;
+        pos @kern1.LC_u @kern2.UC_T -45;
+        pos @kern1.LC_u @kern2.UC_V -15;
+        pos @kern1.LC_u @kern2.UC_W -20;
+        pos @kern1.LC_u @kern2.UC_Y -75;
+        pos @kern1.LC_v @kern2.LC_a -15;
+        pos @kern1.LC_v @kern2.LC_c -25;
+        pos @kern1.LC_v @kern2.LC_d -25;
+        pos @kern1.LC_v @kern2.LC_g -30;
+        pos @kern1.LC_v @kern2.LC_o -25;
+        pos @kern1.LC_v @kern2.LC_s -15;
+        pos @kern1.LC_v @kern2.LC_v -15;
+        pos @kern1.LC_v @kern2.LC_w -10;
+        pos @kern1.LC_v @kern2.LC_x -15;
+        pos @kern1.LC_v @kern2.PX_bracketright -45;
+        pos @kern1.LC_v @kern2.PX_hyphen -10;
+        pos @kern1.LC_v @kern2.PX_period -65;
+        pos @kern1.LC_v @kern2.PX_quoteleft 10;
+        pos @kern1.LC_v @kern2.PX_quoteright 10;
+        pos @kern1.LC_v @kern2.PX_slash -25;
+        pos @kern1.LC_v @kern2.UC_A -45;
+        pos @kern1.LC_v @kern2.UC_J -35;
+        pos @kern1.LC_v @kern2.UC_T -65;
+        pos @kern1.LC_v @kern2.UC_V -25;
+        pos @kern1.LC_v @kern2.UC_W -15;
+        pos @kern1.LC_v @kern2.UC_X -45;
+        pos @kern1.LC_v @kern2.UC_Y -60;
+        pos @kern1.LC_v @kern2.UC_Z -5;
+        pos @kern1.LC_w @kern2.LC_a -15;
+        pos @kern1.LC_w @kern2.LC_c -20;
+        pos @kern1.LC_w @kern2.LC_d -20;
+        pos @kern1.LC_w @kern2.LC_g -25;
+        pos @kern1.LC_w @kern2.LC_o -20;
+        pos @kern1.LC_w @kern2.LC_s -10;
+        pos @kern1.LC_w @kern2.LC_v -10;
+        pos @kern1.LC_w @kern2.LC_x -20;
+        pos @kern1.LC_w @kern2.LC_z -5;
+        pos @kern1.LC_w @kern2.PX_bracketright -15;
+        pos @kern1.LC_w @kern2.PX_hyphen -5;
+        pos @kern1.LC_w @kern2.PX_period -20;
+        pos @kern1.LC_w @kern2.PX_quoteleft 10;
+        pos @kern1.LC_w @kern2.UC_A -25;
+        pos @kern1.LC_w @kern2.UC_J -15;
+        pos @kern1.LC_w @kern2.UC_O 5;
+        pos @kern1.LC_w @kern2.UC_S -5;
+        pos @kern1.LC_w @kern2.UC_T -45;
+        pos @kern1.LC_w @kern2.UC_V -25;
+        pos @kern1.LC_w @kern2.UC_W -15;
+        pos @kern1.LC_w @kern2.UC_X -35;
+        pos @kern1.LC_w @kern2.UC_Y -55;
+        pos @kern1.LC_w @kern2.UC_Z -5;
+        pos @kern1.LC_x @kern2.LC_a -10;
+        pos @kern1.LC_x @kern2.LC_c -30;
+        pos @kern1.LC_x @kern2.LC_d -30;
+        pos @kern1.LC_x @kern2.LC_g -30;
+        pos @kern1.LC_x @kern2.LC_o -30;
+        pos @kern1.LC_x @kern2.LC_s -15;
+        pos @kern1.LC_x @kern2.LC_u -10;
+        pos @kern1.LC_x @kern2.LC_v -15;
+        pos @kern1.LC_x @kern2.LC_w -20;
+        pos @kern1.LC_x @kern2.LC_x -15;
+        pos @kern1.LC_x @kern2.MIX_sup -10;
+        pos @kern1.LC_x @kern2.PX_hyphen -25;
+        pos @kern1.LC_x @kern2.PX_quoteright -10;
+        pos @kern1.LC_x @kern2.UC_A -15;
+        pos @kern1.LC_x @kern2.UC_J -15;
+        pos @kern1.LC_x @kern2.UC_O -5;
+        pos @kern1.LC_x @kern2.UC_T -35;
+        pos @kern1.LC_x @kern2.UC_V -30;
+        pos @kern1.LC_x @kern2.UC_W -15;
+        pos @kern1.LC_x @kern2.UC_X -25;
+        pos @kern1.LC_x @kern2.UC_Y -85;
+        pos @kern1.LC_z @kern2.LC_c -20;
+        pos @kern1.LC_z @kern2.LC_d -20;
+        pos @kern1.LC_z @kern2.LC_g -20;
+        pos @kern1.LC_z @kern2.LC_o -20;
+        pos @kern1.LC_z @kern2.PX_quoteleft 5;
+        pos @kern1.LC_z @kern2.PX_slash 15;
+        pos @kern1.LC_z @kern2.UC_S 5;
+        pos @kern1.LC_z @kern2.UC_T -45;
+        pos @kern1.LC_z @kern2.UC_V -20;
+        pos @kern1.LC_z @kern2.UC_W -15;
+        pos @kern1.LC_z @kern2.UC_Y -75;
+        pos @kern1.MIX_sup @kern2.LC_a -25;
+        pos @kern1.MIX_sup @kern2.LC_c -30;
+        pos @kern1.MIX_sup @kern2.LC_d -30;
+        pos @kern1.MIX_sup @kern2.LC_f 5;
+        pos @kern1.MIX_sup @kern2.LC_g -5;
+        pos @kern1.MIX_sup @kern2.LC_o -30;
+        pos @kern1.MIX_sup @kern2.LC_s -15;
+        pos @kern1.MIX_sup @kern2.LC_t 10;
+        pos @kern1.MIX_sup @kern2.LC_x -10;
+        pos @kern1.MIX_sup @kern2.PX_hyphen -10;
+        pos @kern1.MIX_sup @kern2.PX_period -50;
+        pos @kern1.MIX_sup @kern2.PX_slash -40;
+        pos @kern1.MIX_sup @kern2.UC_A -70;
+        pos @kern1.MIX_sup @kern2.UC_J -100;
+        pos @kern1.MIX_sup @kern2.UC_O -15;
+        pos @kern1.MIX_sup @kern2.UC_X -20;
+        pos @kern1.MIX_sup @kern2.UC_Y -10;
+        pos @kern1.PX_bracketleft @kern2.LC_a -10;
+        pos @kern1.PX_bracketleft @kern2.LC_c -30;
+        pos @kern1.PX_bracketleft @kern2.LC_d -30;
+        pos @kern1.PX_bracketleft @kern2.LC_g -30;
+        pos @kern1.PX_bracketleft @kern2.LC_j 50;
+        pos @kern1.PX_bracketleft @kern2.LC_o -30;
+        pos @kern1.PX_bracketleft @kern2.LC_u -15;
+        pos @kern1.PX_bracketleft @kern2.LC_v -45;
+        pos @kern1.PX_bracketleft @kern2.LC_w -15;
+        pos @kern1.PX_bracketleft @kern2.PX_guillemotright -20;
+        pos @kern1.PX_bracketleft @kern2.PX_hyphen -40;
+        pos @kern1.PX_bracketleft @kern2.PX_quoteleft -30;
+        pos @kern1.PX_bracketleft @kern2.PX_quoteright -30;
+        pos @kern1.PX_bracketleft @kern2.UC_O -25;
+        pos @kern1.PX_bracketleft @kern2.UC_S -20;
+        pos @kern1.PX_guillemotleft @kern2.PX_bracketright -40;
+        pos @kern1.PX_guillemotleft @kern2.UC_T -70;
+        pos @kern1.PX_guillemotleft @kern2.UC_V -40;
+        pos @kern1.PX_guillemotleft @kern2.UC_W -20;
+        pos @kern1.PX_guillemotleft @kern2.UC_X -10;
+        pos @kern1.PX_guillemotleft @kern2.UC_Y -40;
+        pos @kern1.PX_hyphen @kern2.LC_c 10;
+        pos @kern1.PX_hyphen @kern2.LC_d 10;
+        pos @kern1.PX_hyphen @kern2.LC_o 10;
+        pos @kern1.PX_hyphen @kern2.LC_s 10;
+        pos @kern1.PX_hyphen @kern2.LC_v -10;
+        pos @kern1.PX_hyphen @kern2.LC_w -5;
+        pos @kern1.PX_hyphen @kern2.LC_x -25;
+        pos @kern1.PX_hyphen @kern2.MIX_sup -10;
+        pos @kern1.PX_hyphen @kern2.PX_bracketright -40;
+        pos @kern1.PX_hyphen @kern2.PX_slash -10;
+        pos @kern1.PX_hyphen @kern2.UC_A -15;
+        pos @kern1.PX_hyphen @kern2.UC_J 15;
+        pos @kern1.PX_hyphen @kern2.UC_O 5;
+        pos @kern1.PX_hyphen @kern2.UC_T -90;
+        pos @kern1.PX_hyphen @kern2.UC_V -30;
+        pos @kern1.PX_hyphen @kern2.UC_W -5;
+        pos @kern1.PX_hyphen @kern2.UC_X -30;
+        pos @kern1.PX_hyphen @kern2.UC_Y -70;
+        pos @kern1.PX_hyphen @kern2.UC_Z -10;
+        pos @kern1.PX_period @kern2.LC_c -10;
+        pos @kern1.PX_period @kern2.LC_d -10;
+        pos @kern1.PX_period @kern2.LC_f -30;
+        pos @kern1.PX_period @kern2.LC_g -10;
+        pos @kern1.PX_period @kern2.LC_o -10;
+        pos @kern1.PX_period @kern2.LC_t -15;
+        pos @kern1.PX_period @kern2.LC_u -10;
+        pos @kern1.PX_period @kern2.LC_v -65;
+        pos @kern1.PX_period @kern2.LC_w -20;
+        pos @kern1.PX_period @kern2.MIX_sup -50;
+        pos @kern1.PX_period @kern2.PX_quoteleft -30;
+        pos @kern1.PX_period @kern2.PX_quoteright -30;
+        pos @kern1.PX_period @kern2.UC_A 5;
+        pos @kern1.PX_period @kern2.UC_J 5;
+        pos @kern1.PX_period @kern2.UC_O -25;
+        pos @kern1.PX_period @kern2.UC_S 5;
+        pos @kern1.PX_period @kern2.UC_T -100;
+        pos @kern1.PX_period @kern2.UC_U -15;
+        pos @kern1.PX_period @kern2.UC_V -70;
+        pos @kern1.PX_period @kern2.UC_W -20;
+        pos @kern1.PX_period @kern2.UC_Y -80;
+        pos @kern1.PX_quoteleft @kern2.LC_a -70;
+        pos @kern1.PX_quoteleft @kern2.LC_c -85;
+        pos @kern1.PX_quoteleft @kern2.LC_d -85;
+        pos @kern1.PX_quoteleft @kern2.LC_f -15;
+        pos @kern1.PX_quoteleft @kern2.LC_g -80;
+        pos @kern1.PX_quoteleft @kern2.LC_i -20;
+        pos @kern1.PX_quoteleft @kern2.LC_n -35;
+        pos @kern1.PX_quoteleft @kern2.LC_o -85;
+        pos @kern1.PX_quoteleft @kern2.LC_s -65;
+        pos @kern1.PX_quoteleft @kern2.LC_u -40;
+        pos @kern1.PX_quoteleft @kern2.LC_v -20;
+        pos @kern1.PX_quoteleft @kern2.LC_w -35;
+        pos @kern1.PX_quoteleft @kern2.LC_x -30;
+        pos @kern1.PX_quoteleft @kern2.LC_z -25;
+        pos @kern1.PX_quoteleft @kern2.PX_period -40;
+        pos @kern1.PX_quoteleft @kern2.PX_slash -50;
+        pos @kern1.PX_quoteleft @kern2.UC_A -75;
+        pos @kern1.PX_quoteleft @kern2.UC_J -140;
+        pos @kern1.PX_quoteleft @kern2.UC_O -30;
+        pos @kern1.PX_quoteleft @kern2.UC_S -25;
+        pos @kern1.PX_quoteleft @kern2.UC_Y 5;
+        pos @kern1.PX_quoteright @kern2.LC_a -85;
+        pos @kern1.PX_quoteright @kern2.LC_c -90;
+        pos @kern1.PX_quoteright @kern2.LC_d -90;
+        pos @kern1.PX_quoteright @kern2.LC_f -20;
+        pos @kern1.PX_quoteright @kern2.LC_g -95;
+        pos @kern1.PX_quoteright @kern2.LC_i -15;
+        pos @kern1.PX_quoteright @kern2.LC_n -40;
+        pos @kern1.PX_quoteright @kern2.LC_o -90;
+        pos @kern1.PX_quoteright @kern2.LC_s -85;
+        pos @kern1.PX_quoteright @kern2.LC_t -5;
+        pos @kern1.PX_quoteright @kern2.LC_u -35;
+        pos @kern1.PX_quoteright @kern2.LC_v -35;
+        pos @kern1.PX_quoteright @kern2.LC_w -50;
+        pos @kern1.PX_quoteright @kern2.LC_x -40;
+        pos @kern1.PX_quoteright @kern2.LC_z -45;
+        pos @kern1.PX_quoteright @kern2.PX_period -50;
+        pos @kern1.PX_quoteright @kern2.PX_slash -50;
+        pos @kern1.PX_quoteright @kern2.UC_A -80;
+        pos @kern1.PX_quoteright @kern2.UC_J -130;
+        pos @kern1.PX_quoteright @kern2.UC_O -45;
+        pos @kern1.PX_quoteright @kern2.UC_S -40;
+        pos @kern1.PX_quoteright @kern2.UC_V 10;
+        pos @kern1.PX_quoteright @kern2.UC_Y 20;
+        pos @kern1.PX_slash @kern2.LC_a -55;
+        pos @kern1.PX_slash @kern2.LC_c -55;
+        pos @kern1.PX_slash @kern2.LC_d -55;
+        pos @kern1.PX_slash @kern2.LC_g -50;
+        pos @kern1.PX_slash @kern2.LC_n -25;
+        pos @kern1.PX_slash @kern2.LC_o -55;
+        pos @kern1.PX_slash @kern2.LC_s -45;
+        pos @kern1.PX_slash @kern2.LC_u -10;
+        pos @kern1.PX_slash @kern2.LC_v -20;
+        pos @kern1.PX_slash @kern2.LC_w -20;
+        pos @kern1.PX_slash @kern2.LC_x -30;
+        pos @kern1.PX_slash @kern2.LC_z -20;
+        pos @kern1.PX_slash @kern2.PX_hyphen -10;
+        pos @kern1.PX_slash @kern2.PX_slash -50;
+        pos @kern1.PX_slash @kern2.UC_A -45;
+        pos @kern1.PX_slash @kern2.UC_J -70;
+        pos @kern1.PX_slash @kern2.UC_O -10;
+        pos @kern1.PX_slash @kern2.UC_T 10;
+        pos @kern1.PX_slash @kern2.UC_U 5;
+        pos @kern1.PX_slash @kern2.UC_V 15;
+        pos @kern1.PX_slash @kern2.UC_Y 10;
+        pos @kern1.UC_A @kern2.LC_c -15;
+        pos @kern1.UC_A @kern2.LC_d -15;
+        pos @kern1.UC_A @kern2.LC_f -20;
+        pos @kern1.UC_A @kern2.LC_g -20;
+        pos @kern1.UC_A @kern2.LC_o -15;
+        pos @kern1.UC_A @kern2.LC_t -25;
+        pos @kern1.UC_A @kern2.LC_u -15;
+        pos @kern1.UC_A @kern2.LC_v -40;
+        pos @kern1.UC_A @kern2.LC_w -20;
+        pos @kern1.UC_A @kern2.LC_x -20;
+        pos @kern1.UC_A @kern2.MIX_sup -70;
+        pos @kern1.UC_A @kern2.PX_hyphen -15;
+        pos @kern1.UC_A @kern2.PX_period 5;
+        pos @kern1.UC_A @kern2.PX_quoteleft -50;
+        pos @kern1.UC_A @kern2.PX_quoteright -80;
+        pos @kern1.UC_A @kern2.UC_A -10;
+        pos @kern1.UC_A @kern2.UC_J -25;
+        pos @kern1.UC_A @kern2.UC_O -45;
+        pos @kern1.UC_A @kern2.UC_S -15;
+        pos @kern1.UC_A @kern2.UC_T -105;
+        pos @kern1.UC_A @kern2.UC_U -45;
+        pos @kern1.UC_A @kern2.UC_V -110;
+        pos @kern1.UC_A @kern2.UC_W -55;
+        pos @kern1.UC_A @kern2.UC_X -30;
+        pos @kern1.UC_A @kern2.UC_Y -115;
+        pos @kern1.UC_B @kern2.LC_a 10;
+        pos @kern1.UC_B @kern2.LC_w -5;
+        pos @kern1.UC_B @kern2.PX_bracketright -15;
+        pos @kern1.UC_B @kern2.PX_hyphen 10;
+        pos @kern1.UC_B @kern2.UC_A -5;
+        pos @kern1.UC_B @kern2.UC_T -10;
+        pos @kern1.UC_B @kern2.UC_V -20;
+        pos @kern1.UC_B @kern2.UC_W -15;
+        pos @kern1.UC_B @kern2.UC_X -25;
+        pos @kern1.UC_B @kern2.UC_Y -25;
+        pos @kern1.UC_C @kern2.LC_a 5;
+        pos @kern1.UC_C @kern2.LC_s -5;
+        pos @kern1.UC_C @kern2.LC_t -5;
+        pos @kern1.UC_C @kern2.LC_v -15;
+        pos @kern1.UC_C @kern2.LC_w -15;
+        pos @kern1.UC_C @kern2.PX_bracketright -10;
+        pos @kern1.UC_C @kern2.PX_hyphen -10;
+        pos @kern1.UC_C @kern2.UC_A -10;
+        pos @kern1.UC_C @kern2.UC_J -5;
+        pos @kern1.UC_C @kern2.UC_O -10;
+        pos @kern1.UC_C @kern2.UC_T -5;
+        pos @kern1.UC_C @kern2.UC_V -10;
+        pos @kern1.UC_C @kern2.UC_W -5;
+        pos @kern1.UC_C @kern2.UC_X -25;
+        pos @kern1.UC_C @kern2.UC_Y -20;
+        pos @kern1.UC_D @kern2.LC_f 5;
+        pos @kern1.UC_D @kern2.LC_t 5;
+        pos @kern1.UC_D @kern2.LC_x -10;
+        pos @kern1.UC_D @kern2.MIX_sup -15;
+        pos @kern1.UC_D @kern2.PX_bracketright -25;
+        pos @kern1.UC_D @kern2.PX_hyphen 5;
+        pos @kern1.UC_D @kern2.PX_period -25;
+        pos @kern1.UC_D @kern2.PX_slash -10;
+        pos @kern1.UC_D @kern2.UC_A -50;
+        pos @kern1.UC_D @kern2.UC_J 5;
+        pos @kern1.UC_D @kern2.UC_S -10;
+        pos @kern1.UC_D @kern2.UC_T -40;
+        pos @kern1.UC_D @kern2.UC_V -45;
+        pos @kern1.UC_D @kern2.UC_W -25;
+        pos @kern1.UC_D @kern2.UC_X -65;
+        pos @kern1.UC_D @kern2.UC_Y -70;
+        pos @kern1.UC_D @kern2.UC_Z -20;
+        pos @kern1.UC_E @kern2.LC_t -5;
+        pos @kern1.UC_E @kern2.LC_w -15;
+        pos @kern1.UC_E @kern2.UC_J -10;
+        pos @kern1.UC_E @kern2.UC_O -10;
+        pos @kern1.UC_E @kern2.UC_S -10;
+        pos @kern1.UC_G @kern2.LC_a -5;
+        pos @kern1.UC_G @kern2.LC_f 5;
+        pos @kern1.UC_G @kern2.LC_t 5;
+        pos @kern1.UC_G @kern2.LC_v -10;
+        pos @kern1.UC_G @kern2.LC_w -5;
+        pos @kern1.UC_G @kern2.LC_x -15;
+        pos @kern1.UC_G @kern2.LC_z 5;
+        pos @kern1.UC_G @kern2.MIX_sup -15;
+        pos @kern1.UC_G @kern2.PX_bracketright -20;
+        pos @kern1.UC_G @kern2.PX_hyphen 10;
+        pos @kern1.UC_G @kern2.PX_period -5;
+        pos @kern1.UC_G @kern2.PX_slash -5;
+        pos @kern1.UC_G @kern2.UC_A -40;
+        pos @kern1.UC_G @kern2.UC_S -5;
+        pos @kern1.UC_G @kern2.UC_T -35;
+        pos @kern1.UC_G @kern2.UC_V -30;
+        pos @kern1.UC_G @kern2.UC_W -20;
+        pos @kern1.UC_G @kern2.UC_X -35;
+        pos @kern1.UC_G @kern2.UC_Y -40;
+        pos @kern1.UC_G @kern2.UC_Z -15;
+        pos @kern1.UC_H @kern2.UC_A -5;
+        pos @kern1.UC_J @kern2.LC_a -5;
+        pos @kern1.UC_J @kern2.LC_x -5;
+        pos @kern1.UC_J @kern2.PX_period -10;
+        pos @kern1.UC_J @kern2.UC_A -30;
+        pos @kern1.UC_J @kern2.UC_X -5;
+        pos @kern1.UC_K @kern2.LC_a -25;
+        pos @kern1.UC_K @kern2.LC_c -40;
+        pos @kern1.UC_K @kern2.LC_d -40;
+        pos @kern1.UC_K @kern2.LC_f -25;
+        pos @kern1.UC_K @kern2.LC_g -40;
+        pos @kern1.UC_K @kern2.LC_o -40;
+        pos @kern1.UC_K @kern2.LC_s -10;
+        pos @kern1.UC_K @kern2.LC_t -35;
+        pos @kern1.UC_K @kern2.LC_u -25;
+        pos @kern1.UC_K @kern2.LC_v -45;
+        pos @kern1.UC_K @kern2.LC_w -35;
+        pos @kern1.UC_K @kern2.LC_x -30;
+        pos @kern1.UC_K @kern2.LC_z -5;
+        pos @kern1.UC_K @kern2.MIX_sup -15;
+        pos @kern1.UC_K @kern2.PX_guillemotright -20;
+        pos @kern1.UC_K @kern2.PX_hyphen -50;
+        pos @kern1.UC_K @kern2.PX_quoteleft -30;
+        pos @kern1.UC_K @kern2.PX_quoteright -25;
+        pos @kern1.UC_K @kern2.UC_A -30;
+        pos @kern1.UC_K @kern2.UC_Eth -15;
+        pos @kern1.UC_K @kern2.UC_J -45;
+        pos @kern1.UC_K @kern2.UC_O -55;
+        pos @kern1.UC_K @kern2.UC_S -40;
+        pos @kern1.UC_K @kern2.UC_T -10;
+        pos @kern1.UC_K @kern2.UC_U -15;
+        pos @kern1.UC_K @kern2.UC_V -30;
+        pos @kern1.UC_K @kern2.UC_W -15;
+        pos @kern1.UC_K @kern2.UC_X -25;
+        pos @kern1.UC_K @kern2.UC_Y -30;
+        pos @kern1.UC_K @kern2.UC_Z -10;
+        pos @kern1.UC_L @kern2.LC_a 5;
+        pos @kern1.UC_L @kern2.LC_c -5;
+        pos @kern1.UC_L @kern2.LC_d -5;
+        pos @kern1.UC_L @kern2.LC_f -20;
+        pos @kern1.UC_L @kern2.LC_g -5;
+        pos @kern1.UC_L @kern2.LC_o -5;
+        pos @kern1.UC_L @kern2.LC_t -15;
+        pos @kern1.UC_L @kern2.LC_u -5;
+        pos @kern1.UC_L @kern2.LC_v -60;
+        pos @kern1.UC_L @kern2.LC_w -30;
+        pos @kern1.UC_L @kern2.MIX_sup -110;
+        pos @kern1.UC_L @kern2.PX_hyphen -40;
+        pos @kern1.UC_L @kern2.PX_quoteleft -85;
+        pos @kern1.UC_L @kern2.PX_quoteright -90;
+        pos @kern1.UC_L @kern2.UC_J -10;
+        pos @kern1.UC_L @kern2.UC_O -30;
+        pos @kern1.UC_L @kern2.UC_T -120;
+        pos @kern1.UC_L @kern2.UC_U -25;
+        pos @kern1.UC_L @kern2.UC_V -90;
+        pos @kern1.UC_L @kern2.UC_W -50;
+        pos @kern1.UC_L @kern2.UC_Y -110;
+        pos @kern1.UC_O @kern2.LC_f 5;
+        pos @kern1.UC_O @kern2.LC_t 5;
+        pos @kern1.UC_O @kern2.LC_x -10;
+        pos @kern1.UC_O @kern2.MIX_sup -15;
+        pos @kern1.UC_O @kern2.PX_bracketright -25;
+        pos @kern1.UC_O @kern2.PX_hyphen 5;
+        pos @kern1.UC_O @kern2.PX_period -25;
+        pos @kern1.UC_O @kern2.PX_slash -10;
+        pos @kern1.UC_O @kern2.UC_A -45;
+        pos @kern1.UC_O @kern2.UC_J 5;
+        pos @kern1.UC_O @kern2.UC_S -10;
+        pos @kern1.UC_O @kern2.UC_T -35;
+        pos @kern1.UC_O @kern2.UC_V -45;
+        pos @kern1.UC_O @kern2.UC_W -20;
+        pos @kern1.UC_O @kern2.UC_X -50;
+        pos @kern1.UC_O @kern2.UC_Y -60;
+        pos @kern1.UC_O @kern2.UC_Z -15;
+        pos @kern1.UC_R @kern2.LC_c -15;
+        pos @kern1.UC_R @kern2.LC_d -15;
+        pos @kern1.UC_R @kern2.LC_f 5;
+        pos @kern1.UC_R @kern2.LC_g -15;
+        pos @kern1.UC_R @kern2.LC_o -15;
+        pos @kern1.UC_R @kern2.LC_s -5;
+        pos @kern1.UC_R @kern2.MIX_sup -5;
+        pos @kern1.UC_R @kern2.PX_hyphen -5;
+        pos @kern1.UC_R @kern2.PX_quoteleft 10;
+        pos @kern1.UC_R @kern2.UC_A -10;
+        pos @kern1.UC_R @kern2.UC_J -25;
+        pos @kern1.UC_R @kern2.UC_O -10;
+        pos @kern1.UC_R @kern2.UC_T -15;
+        pos @kern1.UC_R @kern2.UC_U -5;
+        pos @kern1.UC_R @kern2.UC_V -20;
+        pos @kern1.UC_R @kern2.UC_W -15;
+        pos @kern1.UC_R @kern2.UC_X -15;
+        pos @kern1.UC_R @kern2.UC_Y -30;
+        pos @kern1.UC_R @kern2.UC_Z -10;
+        pos @kern1.UC_S @kern2.LC_f -5;
+        pos @kern1.UC_S @kern2.LC_t -10;
+        pos @kern1.UC_S @kern2.LC_v -15;
+        pos @kern1.UC_S @kern2.LC_w -10;
+        pos @kern1.UC_S @kern2.LC_x -15;
+        pos @kern1.UC_S @kern2.MIX_sup -15;
+        pos @kern1.UC_S @kern2.PX_bracketright -15;
+        pos @kern1.UC_S @kern2.PX_hyphen 10;
+        pos @kern1.UC_S @kern2.PX_quoteright -15;
+        pos @kern1.UC_S @kern2.UC_A -25;
+        pos @kern1.UC_S @kern2.UC_O -5;
+        pos @kern1.UC_S @kern2.UC_S -10;
+        pos @kern1.UC_S @kern2.UC_T -20;
+        pos @kern1.UC_S @kern2.UC_V -20;
+        pos @kern1.UC_S @kern2.UC_W -15;
+        pos @kern1.UC_S @kern2.UC_X -35;
+        pos @kern1.UC_S @kern2.UC_Y -30;
+        pos @kern1.UC_T @kern2.LC_a -100;
+        pos @kern1.UC_T @kern2.LC_c -100;
+        pos @kern1.UC_T @kern2.LC_d -100;
+        pos @kern1.UC_T @kern2.LC_f -30;
+        pos @kern1.UC_T @kern2.LC_g -110;
+        pos @kern1.UC_T @kern2.LC_n -70;
+        pos @kern1.UC_T @kern2.LC_o -100;
+        pos @kern1.UC_T @kern2.LC_s -80;
+        pos @kern1.UC_T @kern2.LC_t -15;
+        pos @kern1.UC_T @kern2.LC_u -70;
+        pos @kern1.UC_T @kern2.LC_v -70;
+        pos @kern1.UC_T @kern2.LC_w -80;
+        pos @kern1.UC_T @kern2.LC_x -70;
+        pos @kern1.UC_T @kern2.LC_z -50;
+        pos @kern1.UC_T @kern2.PX_colon -35;
+        pos @kern1.UC_T @kern2.PX_guillemotright -70;
+        pos @kern1.UC_T @kern2.PX_hyphen -90;
+        pos @kern1.UC_T @kern2.PX_period -100;
+        pos @kern1.UC_T @kern2.PX_slash -65;
+        pos @kern1.UC_T @kern2.UC_A -105;
+        pos @kern1.UC_T @kern2.UC_J -110;
+        pos @kern1.UC_T @kern2.UC_O -35;
+        pos @kern1.UC_T @kern2.UC_S -20;
+        pos @kern1.UC_T @kern2.UC_V 5;
+        pos @kern1.UC_T @kern2.UC_X -10;
+        pos @kern1.UC_U @kern2.LC_a -5;
+        pos @kern1.UC_U @kern2.LC_s -5;
+        pos @kern1.UC_U @kern2.LC_x -5;
+        pos @kern1.UC_U @kern2.PX_period -15;
+        pos @kern1.UC_U @kern2.PX_slash -10;
+        pos @kern1.UC_U @kern2.UC_A -45;
+        pos @kern1.UC_U @kern2.UC_S -5;
+        pos @kern1.UC_U @kern2.UC_X -10;
+        pos @kern1.UC_U @kern2.UC_Y -5;
+        pos @kern1.UC_V @kern2.LC_a -50;
+        pos @kern1.UC_V @kern2.LC_c -60;
+        pos @kern1.UC_V @kern2.LC_d -60;
+        pos @kern1.UC_V @kern2.LC_f -20;
+        pos @kern1.UC_V @kern2.LC_g -60;
+        pos @kern1.UC_V @kern2.LC_i -10;
+        pos @kern1.UC_V @kern2.LC_j -5;
+        pos @kern1.UC_V @kern2.LC_n -35;
+        pos @kern1.UC_V @kern2.LC_o -60;
+        pos @kern1.UC_V @kern2.LC_s -50;
+        pos @kern1.UC_V @kern2.LC_t -20;
+        pos @kern1.UC_V @kern2.LC_u -25;
+        pos @kern1.UC_V @kern2.LC_v -30;
+        pos @kern1.UC_V @kern2.LC_w -40;
+        pos @kern1.UC_V @kern2.LC_x -40;
+        pos @kern1.UC_V @kern2.LC_z -30;
+        pos @kern1.UC_V @kern2.PX_colon -30;
+        pos @kern1.UC_V @kern2.PX_guillemotright -40;
+        pos @kern1.UC_V @kern2.PX_hyphen -30;
+        pos @kern1.UC_V @kern2.PX_period -70;
+        pos @kern1.UC_V @kern2.PX_quoteleft -10;
+        pos @kern1.UC_V @kern2.PX_quoteright -5;
+        pos @kern1.UC_V @kern2.PX_slash -55;
+        pos @kern1.UC_V @kern2.UC_A -110;
+        pos @kern1.UC_V @kern2.UC_Eth -5;
+        pos @kern1.UC_V @kern2.UC_J -90;
+        pos @kern1.UC_V @kern2.UC_O -45;
+        pos @kern1.UC_V @kern2.UC_S -30;
+        pos @kern1.UC_V @kern2.UC_T 5;
+        pos @kern1.UC_V @kern2.UC_V -10;
+        pos @kern1.UC_V @kern2.UC_W -10;
+        pos @kern1.UC_V @kern2.UC_X -25;
+        pos @kern1.UC_V @kern2.UC_Y -20;
+        pos @kern1.UC_V @kern2.UC_Z -10;
+        pos @kern1.UC_W @kern2.LC_a -35;
+        pos @kern1.UC_W @kern2.LC_c -35;
+        pos @kern1.UC_W @kern2.LC_d -35;
+        pos @kern1.UC_W @kern2.LC_f -10;
+        pos @kern1.UC_W @kern2.LC_g -40;
+        pos @kern1.UC_W @kern2.LC_i -20;
+        pos @kern1.UC_W @kern2.LC_j -10;
+        pos @kern1.UC_W @kern2.LC_n -20;
+        pos @kern1.UC_W @kern2.LC_o -35;
+        pos @kern1.UC_W @kern2.LC_s -25;
+        pos @kern1.UC_W @kern2.LC_t -10;
+        pos @kern1.UC_W @kern2.LC_u -20;
+        pos @kern1.UC_W @kern2.LC_v -20;
+        pos @kern1.UC_W @kern2.LC_w -25;
+        pos @kern1.UC_W @kern2.LC_x -25;
+        pos @kern1.UC_W @kern2.LC_z -20;
+        pos @kern1.UC_W @kern2.PX_guillemotright -20;
+        pos @kern1.UC_W @kern2.PX_hyphen -5;
+        pos @kern1.UC_W @kern2.PX_period -20;
+        pos @kern1.UC_W @kern2.PX_slash -25;
+        pos @kern1.UC_W @kern2.UC_A -55;
+        pos @kern1.UC_W @kern2.UC_J -60;
+        pos @kern1.UC_W @kern2.UC_O -20;
+        pos @kern1.UC_W @kern2.UC_S -25;
+        pos @kern1.UC_W @kern2.UC_V -10;
+        pos @kern1.UC_W @kern2.UC_W -10;
+        pos @kern1.UC_W @kern2.UC_X -15;
+        pos @kern1.UC_W @kern2.UC_Y -15;
+        pos @kern1.UC_W @kern2.UC_Z -5;
+        pos @kern1.UC_X @kern2.LC_a -15;
+        pos @kern1.UC_X @kern2.LC_c -30;
+        pos @kern1.UC_X @kern2.LC_d -30;
+        pos @kern1.UC_X @kern2.LC_f -25;
+        pos @kern1.UC_X @kern2.LC_g -45;
+        pos @kern1.UC_X @kern2.LC_o -30;
+        pos @kern1.UC_X @kern2.LC_s -15;
+        pos @kern1.UC_X @kern2.LC_t -30;
+        pos @kern1.UC_X @kern2.LC_u -25;
+        pos @kern1.UC_X @kern2.LC_v -50;
+        pos @kern1.UC_X @kern2.LC_w -40;
+        pos @kern1.UC_X @kern2.LC_x -30;
+        pos @kern1.UC_X @kern2.MIX_sup -20;
+        pos @kern1.UC_X @kern2.PX_guillemotright -10;
+        pos @kern1.UC_X @kern2.PX_hyphen -30;
+        pos @kern1.UC_X @kern2.PX_quoteleft -35;
+        pos @kern1.UC_X @kern2.PX_quoteright -35;
+        pos @kern1.UC_X @kern2.UC_A -30;
+        pos @kern1.UC_X @kern2.UC_J -50;
+        pos @kern1.UC_X @kern2.UC_O -50;
+        pos @kern1.UC_X @kern2.UC_S -30;
+        pos @kern1.UC_X @kern2.UC_T -10;
+        pos @kern1.UC_X @kern2.UC_U -10;
+        pos @kern1.UC_X @kern2.UC_V -25;
+        pos @kern1.UC_X @kern2.UC_W -15;
+        pos @kern1.UC_X @kern2.UC_X -20;
+        pos @kern1.UC_X @kern2.UC_Y -20;
+        pos @kern1.UC_X @kern2.UC_Z -5;
+        pos @kern1.UC_Y @kern2.LC_a -85;
+        pos @kern1.UC_Y @kern2.LC_c -85;
+        pos @kern1.UC_Y @kern2.LC_d -85;
+        pos @kern1.UC_Y @kern2.LC_f -40;
+        pos @kern1.UC_Y @kern2.LC_g -85;
+        pos @kern1.UC_Y @kern2.LC_i -25;
+        pos @kern1.UC_Y @kern2.LC_j -25;
+        pos @kern1.UC_Y @kern2.LC_n -60;
+        pos @kern1.UC_Y @kern2.LC_o -85;
+        pos @kern1.UC_Y @kern2.LC_s -85;
+        pos @kern1.UC_Y @kern2.LC_t -40;
+        pos @kern1.UC_Y @kern2.LC_u -65;
+        pos @kern1.UC_Y @kern2.LC_v -65;
+        pos @kern1.UC_Y @kern2.LC_w -60;
+        pos @kern1.UC_Y @kern2.LC_x -70;
+        pos @kern1.UC_Y @kern2.LC_z -60;
+        pos @kern1.UC_Y @kern2.MIX_sup -10;
+        pos @kern1.UC_Y @kern2.PX_colon -65;
+        pos @kern1.UC_Y @kern2.PX_guillemotright -40;
+        pos @kern1.UC_Y @kern2.PX_hyphen -70;
+        pos @kern1.UC_Y @kern2.PX_period -80;
+        pos @kern1.UC_Y @kern2.PX_quoteleft -20;
+        pos @kern1.UC_Y @kern2.PX_quoteright -25;
+        pos @kern1.UC_Y @kern2.PX_slash -80;
+        pos @kern1.UC_Y @kern2.UC_A -115;
+        pos @kern1.UC_Y @kern2.UC_Eth -20;
+        pos @kern1.UC_Y @kern2.UC_J -120;
+        pos @kern1.UC_Y @kern2.UC_O -60;
+        pos @kern1.UC_Y @kern2.UC_S -40;
+        pos @kern1.UC_Y @kern2.UC_U -5;
+        pos @kern1.UC_Y @kern2.UC_V -20;
+        pos @kern1.UC_Y @kern2.UC_W -15;
+        pos @kern1.UC_Y @kern2.UC_X -20;
+        pos @kern1.UC_Y @kern2.UC_Y -30;
+        pos @kern1.UC_Z @kern2.LC_c -10;
+        pos @kern1.UC_Z @kern2.LC_d -10;
+        pos @kern1.UC_Z @kern2.LC_f -15;
+        pos @kern1.UC_Z @kern2.LC_g -10;
+        pos @kern1.UC_Z @kern2.LC_o -10;
+        pos @kern1.UC_Z @kern2.LC_t -10;
+        pos @kern1.UC_Z @kern2.LC_v -10;
+        pos @kern1.UC_Z @kern2.LC_w -20;
+        pos @kern1.UC_Z @kern2.PX_hyphen -40;
+        pos @kern1.UC_Z @kern2.PX_quoteright -5;
+        pos @kern1.UC_Z @kern2.UC_J -20;
+        pos @kern1.UC_Z @kern2.UC_O -30;
+        pos @kern1.UC_Z @kern2.UC_X -5;
+        pos @kern1.UC_Z @kern2.UC_Y -5;
+    } kern_DFLT;
+
+    lookup kern_arab {
+    #script arab;
+        lookupflag IgnoreMarks RightToLeft;
+        pos @kern1.alef-mark @kern2.teh <10 0 10 0>;
+        pos @kern1.reh yeh-ar.init <10 0 10 0>;
+        pos alef-ar @kern2.teh-ar.init <10 0 10 0>;
+        pos alefHamzabelow-ar @kern2.teh-ar.init <10 0 10 0>;
+    } kern_arab;
+
+    lookupflag 0;
+    lookupflag RightToLeft;
+    script arab;
+    lookup kern_arab;
+    lookupflag 0;
+
+} kern;
+
+
+markClass [tahabove-ar] <anchor 166 536> @mark_top;
+markClass [dotabove-ar] <anchor 62 450> @mark_top;
+markClass [twodotshorizontalabove-ar] <anchor 128 450> @mark_top;
+markClass [threedotsupabove-ar] <anchor 128 430> @mark_top;
+markClass [wasla-ar] <anchor 156 535> @mark_top;
+markClass [gafsarkashabove-ar] <anchor 104 560> @mark_top;
+markClass [alefabove-ar] <anchor 45 536> @mark_top;
+markClass [hamzaabove-ar] <anchor 139 535> @mark_top;
+markClass [hamzaaboveDamma-ar] <anchor 139 535> @mark_top;
+markClass [hamzaaboveDammatan-ar] <anchor 139 535> @mark_top;
+markClass [hamzaaboveFatha-ar] <anchor 139 535> @mark_top;
+markClass [hamzaaboveFathatan-ar] <anchor 139 535> @mark_top;
+markClass [hamzaaboveSukun-ar] <anchor 139 535> @mark_top;
+markClass [fathatan-ar] <anchor 149 535> @mark_top;
+markClass [dammatan-ar] <anchor 162 535> @mark_top;
+markClass [fatha-ar] <anchor 149 535> @mark_top;
+markClass [damma-ar] <anchor 104 535> @mark_top;
+markClass [shadda-ar] <anchor 168 535> @mark_top;
+markClass [sukun-ar] <anchor 117 535> @mark_top;
+markClass [madda-ar] <anchor 206 535> @mark_top;
+markClass [shaddaDamma-ar] <anchor 168 535> @mark_top;
+markClass [shaddaDammatan-ar] <anchor 168 535> @mark_top;
+markClass [shaddaFatha-ar] <anchor 168 535> @mark_top;
+markClass [shaddaFathatan-ar] <anchor 168 535> @mark_top;
+markClass [shaddaKasra-ar] <anchor 149 535> @mark_top;
+markClass [shaddaKasratan-ar] <anchor 149 535> @mark_top;
+markClass [noonghunnaabove-ar] <anchor 104 535> @mark_top;
+
+markClass [dotcenter-ar] <anchor 62 -124> @mark_center;
+
+markClass [dotbelow-ar] <anchor 62 0> @mark_bottom;
+markClass [twodotshorizontalbelow-ar] <anchor 127 0> @mark_bottom;
+markClass [threedotsdownbelow-ar] <anchor 128 0> @mark_bottom;
+markClass [alefbelow-ar] <anchor 45 0> @mark_bottom;
+markClass [hamzabelow-ar] <anchor 139 0> @mark_bottom;
+markClass [hamzabelowKasra-ar] <anchor 139 0> @mark_bottom;
+markClass [hamzabelowKasratan-ar] <anchor 139 0> @mark_bottom;
+markClass [kasratan-ar] <anchor 149 0> @mark_bottom;
+markClass [kasra-ar] <anchor 149 0> @mark_bottom;
+
+
+feature mark {
+	
+	lookup markarab {
+		pos base [hamza-ar]  <anchor 241 0> mark @mark_bottom <anchor 263 450> mark @mark_top;
+		pos base [alef-ar]  <anchor 119 0> mark @mark_bottom <anchor 119 690> mark @mark_top;
+		pos base [alef-ar.fina]  <anchor 119 0> mark @mark_bottom <anchor 119 690> mark @mark_top;
+		pos base [alef-ar.short]  <anchor 99 0> mark @mark_bottom <anchor 99 620> mark @mark_top;
+		pos base [alef-ar.fina.short]  <anchor 119 0> mark @mark_bottom <anchor 119 620> mark @mark_top;
+		pos base [alefHamzaabove-ar]  <anchor 99 0> mark @mark_bottom <anchor 105 857> mark @mark_top;
+		pos base [alefHamzaabove-ar.fina]  <anchor 119 0> mark @mark_bottom <anchor 125 857> mark @mark_top;
+		pos base [alefHamzabelow-ar]  <anchor 119 -237> mark @mark_bottom <anchor 119 690> mark @mark_top;
+		pos base [alefHamzabelow-ar.fina]  <anchor 119 -237> mark @mark_bottom <anchor 119 690> mark @mark_top;
+		pos base [alefMadda-ar]  <anchor 99 0> mark @mark_bottom <anchor 113 804> mark @mark_top;
+		pos base [alefMadda-ar.fina]  <anchor 119 0> mark @mark_bottom <anchor 133 804> mark @mark_top;
+		pos base [alefWasla-ar]  <anchor 99 0> mark @mark_bottom <anchor 99 876> mark @mark_top;
+		pos base [alefWasla-ar.fina]  <anchor 119 0> mark @mark_bottom <anchor 119 876> mark @mark_top;
+		pos base [behDotless-ar]  <anchor 472 0> mark @mark_bottom <anchor 472 369> mark @mark_top;
+		pos base [behDotless-ar.fina]  <anchor 472 0> mark @mark_bottom <anchor 472 369> mark @mark_top;
+		pos base [behDotless-ar.medi]  <anchor 188 0> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [behDotless-ar.medi_wide]  <anchor 188 0> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [behDotless-ar.init]  <anchor 114 0> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [behDotless-ar.init_wide]  <anchor 128 0> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [beh-ar]  <anchor 472 -166> mark @mark_bottom <anchor 472 369> mark @mark_top;
+		pos base [beh-ar.fina]  <anchor 472 -166> mark @mark_bottom <anchor 472 369> mark @mark_top;
+		pos base [beh-ar.medi]  <anchor 188 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [beh-ar.init]  <anchor 114 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [peh-ar]  <anchor 472 -234> mark @mark_bottom <anchor 472 369> mark @mark_top;
+		pos base [peh-ar.fina]  <anchor 472 -234> mark @mark_bottom <anchor 472 369> mark @mark_top;
+		pos base [peh-ar.medi]  <anchor 188 -234> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [peh-ar.medi.wide]  <anchor 188 -234> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [peh-ar.init]  <anchor 114 -234> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [peh-ar.init.wide]  <anchor 128 -234> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [teh-ar]  <anchor 472 0> mark @mark_bottom <anchor 472 566> mark @mark_top;
+		pos base [teh-ar.fina]  <anchor 472 0> mark @mark_bottom <anchor 472 566> mark @mark_top;
+		pos base [teh-ar.medi]  <anchor 188 0> mark @mark_bottom <anchor 188 647> mark @mark_top;
+		pos base [teh-ar.medi.wide]  <anchor 188 0> mark @mark_bottom <anchor 188 647> mark @mark_top;
+		pos base [teh-ar.init]  <anchor 114 0> mark @mark_bottom <anchor 188 647> mark @mark_top;
+		pos base [teh-ar.init.wide]  <anchor 128 0> mark @mark_bottom <anchor 188 647> mark @mark_top;
+		pos base [theh-ar]  <anchor 472 0> mark @mark_bottom <anchor 472 639> mark @mark_top;
+		pos base [theh-ar.fina]  <anchor 472 0> mark @mark_bottom <anchor 472 639> mark @mark_top;
+		pos base [theh-ar.medi]  <anchor 188 0> mark @mark_bottom <anchor 188 720> mark @mark_top;
+		pos base [theh-ar.medi.wide]  <anchor 188 0> mark @mark_bottom <anchor 188 720> mark @mark_top;
+		pos base [theh-ar.init]  <anchor 114 0> mark @mark_bottom <anchor 188 720> mark @mark_top;
+		pos base [theh-ar.init.wide]  <anchor 128 0> mark @mark_bottom <anchor 188 720> mark @mark_top;
+		pos base [tteh-ar]  <anchor 472 0> mark @mark_bottom <anchor 472 635> mark @mark_top;
+		pos base [tteh-ar.fina]  <anchor 472 0> mark @mark_bottom <anchor 472 635> mark @mark_top;
+		pos base [tteh-ar.medi]  <anchor 188 0> mark @mark_bottom <anchor 188 716> mark @mark_top;
+		pos base [tteh-ar.medi.wide]  <anchor 188 0> mark @mark_bottom <anchor 188 716> mark @mark_top;
+		pos base [tteh-ar.init]  <anchor 114 0> mark @mark_bottom <anchor 188 716> mark @mark_top;
+		pos base [tteh-ar.init.wide]  <anchor 128 0> mark @mark_bottom <anchor 188 716> mark @mark_top;
+		pos base [jeem-ar]  <anchor 308 -288> mark @mark_bottom <anchor 329 460> mark @mark_top;
+		pos base [jeem-ar.fina]  <anchor 308 -288> mark @mark_bottom <anchor 329 460> mark @mark_top;
+		pos base [jeem-ar.medi]  <anchor 279 -166> mark @mark_bottom <anchor 279 460> mark @mark_top;
+		pos base [jeem-ar.init]  <anchor 279 -166> mark @mark_bottom <anchor 279 460> mark @mark_top;
+		pos base [tcheh-ar]  <anchor 375 -288> mark @mark_bottom <anchor 329 460> mark @mark_top;
+		pos base [tcheh-ar.fina]  <anchor 375 -288> mark @mark_bottom <anchor 329 460> mark @mark_top;
+		pos base [tcheh-ar.medi]  <anchor 279 -234> mark @mark_bottom <anchor 279 460> mark @mark_top;
+		pos base [tcheh-ar.init]  <anchor 279 -234> mark @mark_bottom <anchor 279 460> mark @mark_top;
+		pos base [hah-ar.medi]  <anchor 279 0> mark @mark_bottom <anchor 279 460> mark @mark_top;
+		pos base [hah-ar.init]  <anchor 279 0> mark @mark_bottom <anchor 279 460> mark @mark_top;
+		pos base [khah-ar.medi]  <anchor 279 0> mark @mark_bottom <anchor 279 654> mark @mark_top;
+		pos base [khah-ar.init]  <anchor 279 0> mark @mark_bottom <anchor 279 654> mark @mark_top;
+		pos base [dal-ar]  <anchor 243 0> mark @mark_bottom <anchor 233 450> mark @mark_top;
+		pos base [dal-ar.fina]  <anchor 243 0> mark @mark_bottom <anchor 233 450> mark @mark_top;
+		pos base [thal-ar]  <anchor 243 0> mark @mark_bottom <anchor 233 644> mark @mark_top;
+		pos base [thal-ar.fina]  <anchor 243 0> mark @mark_bottom <anchor 233 644> mark @mark_top;
+		pos base [ddal-ar]  <anchor 243 0> mark @mark_bottom <anchor 233 716> mark @mark_top;
+		pos base [ddal-ar.fina]  <anchor 243 0> mark @mark_bottom <anchor 233 716> mark @mark_top;
+		pos base [reh-ar]  <anchor 102 -180> mark @mark_bottom <anchor 202 450> mark @mark_top;
+		pos base [reh-ar.fina]  <anchor 102 -180> mark @mark_bottom <anchor 202 450> mark @mark_top;
+		pos base [zain-ar]  <anchor 102 -180> mark @mark_bottom <anchor 202 644> mark @mark_top;
+		pos base [zain-ar.fina]  <anchor 102 -180> mark @mark_bottom <anchor 202 644> mark @mark_top;
+		pos base [rreh-ar]  <anchor 102 -180> mark @mark_bottom <anchor 202 716> mark @mark_top;
+		pos base [rreh-ar.fina]  <anchor 102 -180> mark @mark_bottom <anchor 202 716> mark @mark_top;
+		pos base [jeh-ar]  <anchor 102 -180> mark @mark_bottom <anchor 202 720> mark @mark_top;
+		pos base [jeh-ar.fina]  <anchor 102 -180> mark @mark_bottom <anchor 202 720> mark @mark_top;
+		pos base [seen-ar]  <anchor 779 0> mark @mark_bottom <anchor 779 370> mark @mark_top;
+		pos base [seen-ar.fina]  <anchor 779 0> mark @mark_bottom <anchor 779 370> mark @mark_top;
+		pos base [seen-ar.medi]  <anchor 439 0> mark @mark_bottom <anchor 439 370> mark @mark_top;
+		pos base [seen-ar.init]  <anchor 439 0> mark @mark_bottom <anchor 439 370> mark @mark_top;
+		pos base [sheen-ar]  <anchor 779 0> mark @mark_bottom <anchor 779 640> mark @mark_top;
+		pos base [sheen-ar.fina]  <anchor 779 0> mark @mark_bottom <anchor 779 640> mark @mark_top;
+		pos base [sheen-ar.medi]  <anchor 439 0> mark @mark_bottom <anchor 439 640> mark @mark_top;
+		pos base [sheen-ar.init]  <anchor 439 0> mark @mark_bottom <anchor 439 640> mark @mark_top;
+		pos base [sad-ar]  <anchor 887 0> mark @mark_bottom <anchor 797 450> mark @mark_top;
+		pos base [sad-ar.fina]  <anchor 887 0> mark @mark_bottom <anchor 797 450> mark @mark_top;
+		pos base [sad-ar.medi]  <anchor 433 0> mark @mark_bottom <anchor 437 450> mark @mark_top;
+		pos base [sad-ar.init]  <anchor 433 0> mark @mark_bottom <anchor 437 450> mark @mark_top;
+		pos base [dad-ar]  <anchor 887 0> mark @mark_bottom <anchor 797 644> mark @mark_top;
+		pos base [dad-ar.fina]  <anchor 887 0> mark @mark_bottom <anchor 797 644> mark @mark_top;
+		pos base [dad-ar.medi]  <anchor 433 0> mark @mark_bottom <anchor 437 644> mark @mark_top;
+		pos base [dad-ar.init]  <anchor 433 0> mark @mark_bottom <anchor 437 644> mark @mark_top;
+		pos base [tah-ar]  <anchor 432 0> mark @mark_bottom <anchor 433 450> mark @mark_top;
+		pos base [tah-ar.fina]  <anchor 432 0> mark @mark_bottom <anchor 433 450> mark @mark_top;
+		pos base [tah-ar.medi]  <anchor 441 0> mark @mark_bottom <anchor 453 450> mark @mark_top;
+		pos base [tah-ar.init]  <anchor 441 0> mark @mark_bottom <anchor 453 450> mark @mark_top;
+		pos base [zah-ar]  <anchor 432 0> mark @mark_bottom <anchor 433 644> mark @mark_top;
+		pos base [zah-ar.fina]  <anchor 432 0> mark @mark_bottom <anchor 433 644> mark @mark_top;
+		pos base [zah-ar.medi]  <anchor 441 0> mark @mark_bottom <anchor 453 644> mark @mark_top;
+		pos base [zah-ar.init]  <anchor 441 0> mark @mark_bottom <anchor 453 644> mark @mark_top;
+		pos base [ain-ar]  <anchor 324 -288> mark @mark_bottom <anchor 283 460> mark @mark_top;
+		pos base [ain-ar.fina]  <anchor 303 -288> mark @mark_bottom <anchor 322 460> mark @mark_top;
+		pos base [ain-ar.medi]  <anchor 332 0> mark @mark_bottom <anchor 342 460> mark @mark_top;
+		pos base [ain-ar.init]  <anchor 323 0> mark @mark_bottom <anchor 323 460> mark @mark_top;
+		pos base [ghain-ar]  <anchor 324 -288> mark @mark_bottom <anchor 283 654> mark @mark_top;
+		pos base [ghain-ar.fina]  <anchor 303 -288> mark @mark_bottom <anchor 322 654> mark @mark_top;
+		pos base [ghain-ar.medi]  <anchor 332 0> mark @mark_bottom <anchor 342 654> mark @mark_top;
+		pos base [ghain-ar.init]  <anchor 323 0> mark @mark_bottom <anchor 323 654> mark @mark_top;
+		pos base [feh-ar]  <anchor 546 0> mark @mark_bottom <anchor 760 654> mark @mark_top;
+		pos base [feh-ar.fina]  <anchor 546 0> mark @mark_bottom <anchor 760 654> mark @mark_top;
+		pos base [feh-ar.medi]  <anchor 308 0> mark @mark_bottom <anchor 307 654> mark @mark_top;
+		pos base [feh-ar.init]  <anchor 308 0> mark @mark_bottom <anchor 307 654> mark @mark_top;
+		pos base [veh-ar]  <anchor 546 0> mark @mark_bottom <anchor 760 730> mark @mark_top;
+		pos base [veh-ar.fina]  <anchor 546 0> mark @mark_bottom <anchor 760 730> mark @mark_top;
+		pos base [veh-ar.medi]  <anchor 308 0> mark @mark_bottom <anchor 307 730> mark @mark_top;
+		pos base [veh-ar.init]  <anchor 308 0> mark @mark_bottom <anchor 307 730> mark @mark_top;
+		pos base [fehDotless-ar]  <anchor 546 0> mark @mark_bottom <anchor 760 460> mark @mark_top;
+		pos base [fehDotless-ar.fina]  <anchor 546 0> mark @mark_bottom <anchor 760 460> mark @mark_top;
+		pos base [fehDotless-ar.medi]  <anchor 308 0> mark @mark_bottom <anchor 307 460> mark @mark_top;
+		pos base [fehDotless-ar.init]  <anchor 308 0> mark @mark_bottom <anchor 307 460> mark @mark_top;
+		pos base [qafDotless-ar]  <anchor 417 -180> mark @mark_bottom <anchor 544 460> mark @mark_top;
+		pos base [qafDotless-ar.fina]  <anchor 417 -180> mark @mark_bottom <anchor 544 460> mark @mark_top;
+		pos base [qaf-ar]  <anchor 417 -180> mark @mark_bottom <anchor 544 657> mark @mark_top;
+		pos base [qaf-ar.fina]  <anchor 417 -180> mark @mark_bottom <anchor 544 657> mark @mark_top;
+		pos base [qaf-ar.medi]  <anchor 308 0> mark @mark_bottom <anchor 307 657> mark @mark_top;
+		pos base [qaf-ar.init]  <anchor 308 0> mark @mark_bottom <anchor 307 657> mark @mark_top;
+		pos base [kaf-ar]  <anchor 492 0> mark @mark_bottom <anchor 467 524> mark @mark_top;
+		pos base [kaf-ar.fina]  <anchor 492 0> mark @mark_bottom <anchor 467 524> mark @mark_top;
+		pos base [kaf-ar.medi]  <anchor 313 0> mark @mark_bottom <anchor 104 539> mark @mark_top;
+		pos base [kaf-ar.init]  <anchor 313 0> mark @mark_bottom <anchor 104 539> mark @mark_top;
+		pos base [keheh-ar]  <anchor 492 0> mark @mark_bottom <anchor 356 560> mark @mark_top;
+		pos base [keheh-ar.fina]  <anchor 492 0> mark @mark_bottom <anchor 356 560> mark @mark_top;
+		pos base [keheh-ar.medi]  <anchor 313 0> mark @mark_bottom <anchor 104 539> mark @mark_top;
+		pos base [keheh-ar.init]  <anchor 313 0> mark @mark_bottom <anchor 104 539> mark @mark_top;
+		pos base [gaf-ar]  <anchor 492 0> mark @mark_bottom <anchor 258 627> mark @mark_top;
+		pos base [gaf-ar.fina]  <anchor 492 0> mark @mark_bottom <anchor 258 627> mark @mark_top;
+		pos base [gaf-ar.medi]  <anchor 313 0> mark @mark_bottom <anchor 12 657> mark @mark_top;
+		pos base [gaf-ar.init]  <anchor 313 0> mark @mark_bottom <anchor 12 657> mark @mark_top;
+		pos base [lam-ar]  <anchor 298 -180> mark @mark_bottom <anchor 298 450> mark @mark_top;
+		pos base [lam-ar.fina]  <anchor 298 -180> mark @mark_bottom <anchor 298 450> mark @mark_top;
+		pos base [lam-ar.medi]  <anchor 183 0> mark @mark_bottom <anchor 184 700> mark @mark_top;
+		pos base [lam-ar.init]  <anchor 100 0> mark @mark_bottom <anchor 184 700> mark @mark_top;
+		pos base [meem-ar]  <anchor 397 -80> mark @mark_bottom <anchor 397 395> mark @mark_top;
+		pos base [meem-ar.fina]  <anchor 397 -80> mark @mark_bottom <anchor 397 395> mark @mark_top;
+		pos base [meem-ar.medi]  <anchor 317 -80> mark @mark_bottom <anchor 317 395> mark @mark_top;
+		pos base [meem-ar.init]  <anchor 317 -80> mark @mark_bottom <anchor 317 395> mark @mark_top;
+		pos base [noon-ar]  <anchor 298 -180> mark @mark_bottom <anchor 298 562> mark @mark_top;
+		pos base [noon-ar.fina]  <anchor 298 -180> mark @mark_bottom <anchor 298 562> mark @mark_top;
+		pos base [noon-ar.medi]  <anchor 188 0> mark @mark_bottom <anchor 188 644> mark @mark_top;
+		pos base [noon-ar.init]  <anchor 114 0> mark @mark_bottom <anchor 188 644> mark @mark_top;
+		pos base [noonghunna-ar]  <anchor 298 -180> mark @mark_bottom <anchor 298 368> mark @mark_top;
+		pos base [noonghunna-ar.fina]  <anchor 298 -180> mark @mark_bottom <anchor 298 368> mark @mark_top;
+		pos base [heh-ar]  <anchor 247 -19> mark @mark_bottom <anchor 247 456> mark @mark_top;
+		pos base [heh-ar.fina]  <anchor 251 0> mark @mark_bottom <anchor 255 450> mark @mark_top;
+		pos base [heh-ar.medi]  <anchor 336 -288> mark @mark_bottom <anchor 322 460> mark @mark_top;
+		pos base [heh-ar.init]  <anchor 296 0> mark @mark_bottom <anchor 296 450> mark @mark_top;
+		pos base [hehgoal-ar]  <anchor 247 -19> mark @mark_bottom <anchor 247 456> mark @mark_top;
+		pos base [hehgoal-ar.fina]  <anchor 282 0> mark @mark_bottom <anchor 255 450> mark @mark_top;
+		pos base [hehgoal-ar.medi]  <anchor 229 -260> mark @mark_bottom <anchor 229 201> mark @mark_top;
+		pos base [hehgoal-ar.init]  <anchor 124 -288> mark @mark_bottom <anchor 189 450> mark @mark_top;
+		pos base [hehgoalHamzaabove-ar]  <anchor 247 -19> mark @mark_bottom <anchor 253 693> mark @mark_top;
+		pos base [hehgoalHamzaabove-ar.fina]  <anchor 282 0> mark @mark_bottom <anchor 261 687> mark @mark_top;
+		pos base [hehDoachashmee-ar]  <anchor 296 0> mark @mark_bottom <anchor 296 450> mark @mark_top;
+		pos base [hehDoachashmee-ar.fina]  <anchor 454 -288> mark @mark_bottom <anchor 440 460> mark @mark_top;
+		pos base [hehDoachashmee-ar.medi]  <anchor 336 -288> mark @mark_bottom <anchor 322 460> mark @mark_top;
+		pos base [hehDoachashmee-ar.init]  <anchor 296 0> mark @mark_bottom <anchor 296 450> mark @mark_top;
+		pos base [tehMarbuta-ar]  <anchor 247 -19> mark @mark_bottom <anchor 247 653> mark @mark_top;
+		pos base [tehMarbuta-ar.fina]  <anchor 251 0> mark @mark_bottom <anchor 255 647> mark @mark_top;
+		pos base [tehMarbutagoal-ar]  <anchor 247 -19> mark @mark_bottom <anchor 247 653> mark @mark_top;
+		pos base [tehMarbutagoal-ar.fina]  <anchor 282 0> mark @mark_bottom <anchor 255 647> mark @mark_top;
+		pos base [waw-ar]  <anchor 271 -180> mark @mark_bottom <anchor 267 460> mark @mark_top;
+		pos base [waw-ar.fina]  <anchor 271 -180> mark @mark_bottom <anchor 267 460> mark @mark_top;
+		pos base [wawHamzaabove-ar]  <anchor 271 -180> mark @mark_bottom <anchor 273 697> mark @mark_top;
+		pos base [wawHamzaabove-ar.fina]  <anchor 271 -180> mark @mark_bottom <anchor 273 697> mark @mark_top;
+		pos base [alefMaksura-ar]  <anchor 423 -180> mark @mark_bottom <anchor 140 272> mark @mark_top;
+		pos base [alefMaksura-ar.fina]  <anchor 423 -180> mark @mark_bottom <anchor 140 272> mark @mark_top;
+		pos base [yeh-ar]  <anchor 423 -346> mark @mark_bottom <anchor 140 272> mark @mark_top;
+		pos base [yeh-ar.fina]  <anchor 423 -346> mark @mark_bottom <anchor 140 272> mark @mark_top;
+		pos base [yeh-ar.medi]  <anchor 188 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [yeh-ar.medi.wide]  <anchor 188 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [yeh-ar.init]  <anchor 114 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [yeh-ar.init.wide]  <anchor 128 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [yehHamzaabove-ar]  <anchor 423 -180> mark @mark_bottom <anchor 146 509> mark @mark_top;
+		pos base [yehHamzaabove-ar.fina]  <anchor 423 -180> mark @mark_bottom <anchor 146 509> mark @mark_top;
+		pos base [yehHamzaabove-ar.medi]  <anchor 188 0> mark @mark_bottom <anchor 194 687> mark @mark_top;
+		pos base [yehHamzaabove-ar.medi.wide]  <anchor 188 0> mark @mark_bottom <anchor 194 687> mark @mark_top;
+		pos base [yehHamzaabove-ar.init]  <anchor 114 0> mark @mark_bottom <anchor 194 687> mark @mark_top;
+		pos base [yehHamzaabove-ar.init.wide]  <anchor 128 0> mark @mark_bottom <anchor 194 687> mark @mark_top;
+		pos base [yeh-farsi]  <anchor 423 -180> mark @mark_bottom <anchor 140 272> mark @mark_top;
+		pos base [yeh-farsi.fina]  <anchor 423 -180> mark @mark_bottom <anchor 140 272> mark @mark_top;
+		pos base [yeh-farsi.medi]  <anchor 188 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [yeh-farsi.init]  <anchor 114 -166> mark @mark_bottom <anchor 188 450> mark @mark_top;
+		pos base [yehbarree-ar]  <anchor 491 0> mark @mark_bottom <anchor 186 322> mark @mark_top;
+		pos base [yehbarree-ar.fina]  <anchor 407 -180> mark @mark_bottom <anchor 154 86> mark @mark_top;
+		pos base [yehbarreeHamzaabove-ar]  <anchor 491 0> mark @mark_bottom <anchor 192 559> mark @mark_top;
+		pos base [yehbarreeHamzaabove-ar.fina]  <anchor 407 -180> mark @mark_bottom <anchor 160 323> mark @mark_top;
+		pos base [kashida-ar]  <anchor 45 0> mark @mark_bottom <anchor 45 476> mark @mark_top;
+	} markarab;
+
+	lookup markarab_bottomcentertop {
+		pos base [hah-ar]  <anchor 324 -288> mark @mark_bottom <anchor 329 -113> mark @mark_center <anchor 329 460> mark @mark_top;
+		pos base [hah-ar.fina]  <anchor 324 -288> mark @mark_bottom <anchor 329 -113> mark @mark_center <anchor 329 460> mark @mark_top;
+		pos base [khah-ar]  <anchor 324 -288> mark @mark_bottom <anchor 329 -113> mark @mark_center <anchor 329 654> mark @mark_top;
+		pos base [khah-ar.fina]  <anchor 324 -288> mark @mark_bottom <anchor 329 -113> mark @mark_center <anchor 329 654> mark @mark_top;
+	} markarab_bottomcentertop;
+
+	lookup mark_arab_mark2Liga {
+		lookupflag RightToLeft;
+		pos ligature [lam_alef-ar]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 573> mark @mark_top
+			;
+		pos ligature [lam_alef-ar.fina]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 573> mark @mark_top
+			;
+		pos ligature [lam_alefHamzaabove-ar]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 790> mark @mark_top
+			;
+		pos ligature [lam_alefHamzaabove-ar.fina]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 790> mark @mark_top
+			;
+		pos ligature [lam_alefHamzabelow-ar]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 573> mark @mark_top
+			;
+		pos ligature [lam_alefHamzabelow-ar.fina]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 573> mark @mark_top
+			;
+		pos ligature [lam_alefMadda-ar]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 705> mark @mark_top
+			;
+		pos ligature [lam_alefMadda-ar.fina]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 705> mark @mark_top
+			;
+		pos ligature [lam_alefWasla-ar]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 779> mark @mark_top
+			;
+		pos ligature [lam_alefWasla-ar.fina]
+			<anchor 550 0> mark @mark_bottom
+			<anchor 550 700> mark @mark_top
+			ligComponent
+			<anchor 298 0> mark @mark_bottom
+			<anchor 298 779> mark @mark_top
+			;
+	} mark_arab_mark2Liga;
+
+	lookupflag 0;
+	lookupflag RightToLeft;
+	script arab;
+	lookup markarab;
+	lookup markarab_bottomcentertop;
+	lookup mark_arab_mark2Liga;
+	lookupflag 0;
+} mark;
+
+feature mkmk {
+	lookup mkmk_arab_bottom {
+		lookupflag RightToLeft;
+		pos mark [dotbelow-ar] <anchor 62 -166> mark @mark_bottom;
+		pos mark [twodotshorizontalbelow-ar] <anchor 127 -166> mark @mark_bottom;
+		pos mark [threedotsdownbelow-ar] <anchor 128 -234> mark @mark_bottom;
+		pos mark [alefbelow-ar] <anchor 45 -263> mark @mark_bottom;
+		pos mark [hamzabelow-ar] <anchor 139 -237> mark @mark_bottom;
+		pos mark [hamzabelowKasra-ar] <anchor 139 -327> mark @mark_bottom;
+		pos mark [hamzabelowKasratan-ar] <anchor 139 -417> mark @mark_bottom;
+		pos mark [kasratan-ar] <anchor 149 -180> mark @mark_bottom;
+		pos mark [kasra-ar] <anchor 149 -90> mark @mark_bottom;
+	} mkmk_arab_bottom;
+
+	lookup mkmk_arab_top {
+		lookupflag RightToLeft;
+		pos mark [tahabove-ar] <anchor 166 802> mark @mark_top;
+		pos mark [dotabove-ar] <anchor 62 644> mark @mark_top;
+		pos mark [twodotshorizontalabove-ar] <anchor 128 647> mark @mark_top;
+		pos mark [threedotsupabove-ar] <anchor 128 700> mark @mark_top;
+		pos mark [wasla-ar] <anchor 156 791> mark @mark_top;
+		pos mark [alefabove-ar] <anchor 45 780> mark @mark_top;
+		pos mark [hamzaabove-ar] <anchor 145 772> mark @mark_top;
+		pos mark [hamzaaboveDamma-ar] <anchor 143 1063> mark @mark_top;
+		pos mark [hamzaaboveDammatan-ar] <anchor 143 1066> mark @mark_top;
+		pos mark [hamzaaboveFatha-ar] <anchor 145 862> mark @mark_top;
+		pos mark [hamzaaboveFathatan-ar] <anchor 145 952> mark @mark_top;
+		pos mark [hamzaaboveSukun-ar] <anchor 144 1035> mark @mark_top;
+		pos mark [fathatan-ar] <anchor 149 715> mark @mark_top;
+		pos mark [dammatan-ar] <anchor 160 829> mark @mark_top;
+		pos mark [fatha-ar] <anchor 149 625> mark @mark_top;
+		pos mark [damma-ar] <anchor 102 826> mark @mark_top;
+		pos mark [shadda-ar] <anchor 168 749> mark @mark_top;
+		pos mark [sukun-ar] <anchor 116 798> mark @mark_top;
+		pos mark [madda-ar] <anchor 220 719> mark @mark_top;
+		pos mark [shaddaDamma-ar] <anchor 166 1040> mark @mark_top;
+		pos mark [shaddaDammatan-ar] <anchor 166 1043> mark @mark_top;
+		pos mark [shaddaFatha-ar] <anchor 168 839> mark @mark_top;
+		pos mark [shaddaFathatan-ar] <anchor 168 929> mark @mark_top;
+		pos mark [shaddaKasra-ar] <anchor 149 839> mark @mark_top;
+		pos mark [shaddaKasratan-ar] <anchor 149 929> mark @mark_top;
+		pos mark [noonghunnaabove-ar] <anchor 104 739> mark @mark_top;
+	} mkmk_arab_top;
+
+	lookupflag 0;
+	lookupflag RightToLeft;
+	script arab;
+	lookup mkmk_arab_bottom;
+	lookup mkmk_arab_top;
+	lookupflag 0;
+} mkmk;
+
+
+table GDEF {
+ GlyphClassDef [hamza-ar alef-ar alef-ar.fina alef-ar.short alef-ar.fina.short alefHamzaabove-ar alefHamzaabove-ar.fina alefHamzabelow-ar alefHamzabelow-ar.fina alefMadda-ar alefMadda-ar.fina alefWasla-ar alefWasla-ar.fina behDotless-ar behDotless-ar.fina behDotless-ar.medi behDotless-ar.medi_wide behDotless-ar.init behDotless-ar.init_wide beh-ar beh-ar.fina beh-ar.medi beh-ar.init peh-ar peh-ar.fina peh-ar.medi peh-ar.medi.wide peh-ar.init peh-ar.init.wide teh-ar teh-ar.fina teh-ar.medi teh-ar.medi.wide teh-ar.init teh-ar.init.wide theh-ar theh-ar.fina theh-ar.medi theh-ar.medi.wide theh-ar.init theh-ar.init.wide tteh-ar tteh-ar.fina tteh-ar.medi tteh-ar.medi.wide tteh-ar.init tteh-ar.init.wide jeem-ar jeem-ar.fina jeem-ar.medi jeem-ar.init tcheh-ar tcheh-ar.fina tcheh-ar.medi tcheh-ar.init hah-ar hah-ar.fina hah-ar.medi hah-ar.init khah-ar khah-ar.fina khah-ar.medi khah-ar.init dal-ar dal-ar.fina thal-ar thal-ar.fina ddal-ar ddal-ar.fina reh-ar reh-ar.fina zain-ar zain-ar.fina rreh-ar rreh-ar.fina jeh-ar jeh-ar.fina seen-ar seen-ar.fina seen-ar.medi seen-ar.init sheen-ar sheen-ar.fina sheen-ar.medi sheen-ar.init sad-ar sad-ar.fina sad-ar.medi sad-ar.init dad-ar dad-ar.fina dad-ar.medi dad-ar.init tah-ar tah-ar.fina tah-ar.medi tah-ar.init zah-ar zah-ar.fina zah-ar.medi zah-ar.init ain-ar ain-ar.fina ain-ar.medi ain-ar.init ghain-ar ghain-ar.fina ghain-ar.medi ghain-ar.init feh-ar feh-ar.fina feh-ar.medi feh-ar.init veh-ar veh-ar.fina veh-ar.medi veh-ar.init fehDotless-ar fehDotless-ar.fina fehDotless-ar.medi fehDotless-ar.init qafDotless-ar qafDotless-ar.fina qaf-ar qaf-ar.fina qaf-ar.medi qaf-ar.init kaf-ar kaf-ar.fina kaf-ar.medi kaf-ar.init keheh-ar keheh-ar.fina keheh-ar.medi keheh-ar.init gaf-ar gaf-ar.fina gaf-ar.medi gaf-ar.init lam-ar lam-ar.fina lam-ar.medi lam-ar.init meem-ar meem-ar.fina meem-ar.medi meem-ar.init noon-ar noon-ar.fina noon-ar.medi noon-ar.init noonghunna-ar noonghunna-ar.fina heh-ar heh-ar.fina heh-ar.medi heh-ar.init hehgoal-ar hehgoal-ar.fina hehgoal-ar.medi hehgoal-ar.init hehgoalHamzaabove-ar hehgoalHamzaabove-ar.fina hehDoachashmee-ar hehDoachashmee-ar.fina hehDoachashmee-ar.medi hehDoachashmee-ar.init tehMarbuta-ar tehMarbuta-ar.fina tehMarbutagoal-ar tehMarbutagoal-ar.fina waw-ar waw-ar.fina wawHamzaabove-ar wawHamzaabove-ar.fina alefMaksura-ar alefMaksura-ar.fina yeh-ar yeh-ar.fina yeh-ar.medi yeh-ar.medi.wide yeh-ar.init yeh-ar.init.wide yehHamzaabove-ar yehHamzaabove-ar.fina yehHamzaabove-ar.medi yehHamzaabove-ar.medi.wide yehHamzaabove-ar.init yehHamzaabove-ar.init.wide yeh-farsi yeh-farsi.fina yeh-farsi.medi yeh-farsi.init yehbarree-ar yehbarree-ar.fina yehbarreeHamzaabove-ar yehbarreeHamzaabove-ar.fina kashida-ar],# Base 
+ [lam_alef-ar lam_alef-ar.fina lam_alefHamzaabove-ar lam_alefHamzaabove-ar.fina lam_alefHamzabelow-ar lam_alefHamzabelow-ar.fina lam_alefMadda-ar lam_alefMadda-ar.fina lam_alefWasla-ar lam_alefWasla-ar.fina], # Liga 
+ [tahabove-ar dotabove-ar dotbelow-ar dotcenter-ar twodotshorizontalabove-ar twodotshorizontalbelow-ar threedotsdownbelow-ar threedotsupabove-ar wasla-ar gafsarkashabove-ar alefabove-ar alefbelow-ar hamzaabove-ar hamzabelow-ar hamzaaboveDamma-ar hamzaaboveDammatan-ar hamzaaboveFatha-ar hamzaaboveFathatan-ar hamzaaboveSukun-ar hamzabelowKasra-ar hamzabelowKasratan-ar fathatan-ar dammatan-ar kasratan-ar fatha-ar damma-ar kasra-ar shadda-ar sukun-ar madda-ar shaddaDamma-ar shaddaDammatan-ar shaddaFatha-ar shaddaFathatan-ar shaddaKasra-ar shaddaKasratan-ar noonghunnaabove-ar], # Mark 
+ ;
+ LigatureCaretByPos lam_alef-ar 423;
+LigatureCaretByPos lam_alef-ar.fina 423;
+LigatureCaretByPos lam_alefHamzaabove-ar 423;
+LigatureCaretByPos lam_alefHamzaabove-ar.fina 423;
+LigatureCaretByPos lam_alefHamzabelow-ar 423;
+LigatureCaretByPos lam_alefHamzabelow-ar.fina 423;
+LigatureCaretByPos lam_alefMadda-ar 423;
+LigatureCaretByPos lam_alefMadda-ar.fina 423;
+LigatureCaretByPos lam_alefWasla-ar 423;
+LigatureCaretByPos lam_alefWasla-ar.fina 423;
+} GDEF;

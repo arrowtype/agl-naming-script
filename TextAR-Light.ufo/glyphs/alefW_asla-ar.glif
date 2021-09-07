@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="alefWasla-ar" format="2">
+  <advance width="198"/>
+  <unicode hex="0671"/>
+  <outline>
+    <component base="alef-ar.short"/>
+    <component base="wasla-ar" xOffset="-57" yOffset="85"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0.7843,0.7843,0.7843,1</string>
+    </dict>
+  </lib>
+</glyph>

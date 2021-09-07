@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="yeh-farsi.init" format="2">
+  <advance width="306"/>
+  <unicode hex="FBFE"/>
+  <outline>
+    <component base="behDotless-ar.init"/>
+    <component base="twodotshorizontalbelow-ar" xOffset="-13"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0.7843,0.7843,0.7843,1</string>
+    </dict>
+  </lib>
+</glyph>

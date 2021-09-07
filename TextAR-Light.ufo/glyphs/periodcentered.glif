@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="periodcentered" format="2">
+  <advance width="218"/>
+  <unicode hex="00B7"/>
+  <guideline x="132" y="331" angle="90.0" identifier="QkBHwKizMQ"/>
+  <outline>
+    <component base="period" yOffset="311"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guideline.showMeasurements.QkBHwKizMQ</key>
+      <true/>
+      <key>public.markColor</key>
+      <string>0.7843,0.7843,0.7843,1</string>
+    </dict>
+  </lib>
+</glyph>

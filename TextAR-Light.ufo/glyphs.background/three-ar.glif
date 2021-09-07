@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="three-ar" format="2">
+  <advance width="500"/>
+  <outline>
+    <contour>
+      <point x="110" y="0" type="line"/>
+      <point x="168" y="0" type="line"/>
+      <point x="168" y="367" type="line"/>
+      <point x="387" y="367" type="line" smooth="yes"/>
+      <point x="493" y="367"/>
+      <point x="546" y="420"/>
+      <point x="546" y="525" type="curve" smooth="yes"/>
+      <point x="546" y="627" type="line"/>
+      <point x="488" y="627" type="line"/>
+      <point x="488" y="525" type="line" smooth="yes"/>
+      <point x="488" y="451"/>
+      <point x="462" y="421"/>
+      <point x="387" y="421" type="curve" smooth="yes"/>
+      <point x="358" y="421" type="line"/>
+      <point x="358" y="575" type="line"/>
+      <point x="300" y="575" type="line"/>
+      <point x="300" y="421" type="line"/>
+      <point x="168" y="421" type="line"/>
+      <point x="168" y="627" type="line"/>
+      <point x="110" y="627" type="line"/>
+    </contour>
+  </outline>
+</glyph>
