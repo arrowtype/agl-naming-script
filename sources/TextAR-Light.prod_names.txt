@@ -1,0 +1,588 @@
+sources/TextAR-Light.ufo
+
+_________________________
+Production names set:
+	comma-ar                       → uni060C
+	dieresiscmb                    → uni0308
+	yehHamzaabove-ar.fina          → uniFE8A
+	dammatan-ar                    → uni064C
+	fi                             → uniFB01
+	keheh-ar.fina                  → uniFB8F
+	question-ar                    → uni061F
+	jeem-ar.init                   → uniFE9F
+	parenright-ar                  → uniFD3F
+	parenleft-ar                   → uniFD3E
+	beh-ar.fina                    → uniFE90
+	seven-ar                       → uni0667
+	sad-ar.init                    → uniFEBB
+	alefabove-ar                   → uni0670
+	zain-ar                        → uni0632
+	teh-ar.fina                    → uniFE96
+	gaf-ar.fina                    → uniFB93
+	theh-ar.fina                   → uniFE9A
+	one-ar                         → uni0661
+	zah-ar.fina                    → uniFEC6
+	ain-ar                         → uni0639
+	circumflexcmb                  → uni0302
+	lam-ar                         → uni0644
+	naira                          → uni20A6
+	kaf-ar.init                    → uniFEDB
+	six-ar                         → uni0666
+	ghain-ar.fina                  → uniFECE
+	lam_alefMadda-ar               → uniFEF5
+	ain-ar.init                    → uniFECB
+	kaf-ar.fina                    → uniFEDA
+	hah-ar.fina                    → uniFEA2
+	tah-ar.fina                    → uniFEC2
+	noonghunna-ar                  → uni06BA
+	twodotshorizontalbelow-ar      → uniFBB5
+	four-ar                        → uni0664
+	beh-ar.init                    → uniFE91
+	tcheh-ar                       → uni0686
+	peh-ar.medi                    → uniFB59
+	uni1E9E                        → uni1E9E
+	peh-ar.fina                    → uniFB57
+	lam_alef-ar.fina               → uniFEFC
+	seen-ar.medi                   → uniFEB4
+	hehgoal-ar                     → uni06C1
+	yehHamzaabove-ar.medi          → uniFE8C
+	noon-ar.init                   → uniFEE7
+	seen-ar.fina                   → uniFEB2
+	waw-ar.fina                    → uniFEEE
+	jeh-ar.fina                    → uniFB8B
+	dad-ar                         → uni0636
+	hah-ar.init                    → uniFEA3
+	veh-ar.fina                    → uniFB6B
+	yehbarreeHamzaabove-ar.fina    → uniFBB1
+	jeh-ar                         → uni0698
+	uni202F                        → uni202F
+	ddal-ar.fina                   → uniFB89
+	fullstop-ar                    → uni06D4
+	thal-ar                        → uni0630
+	gravecmb                       → gravecomb
+	wawHamzaabove-ar               → uni0624
+	dotbelow-ar                    → uniFBB3
+	beh-ar                         → uni0628
+	tah-ar.medi                    → uniFEC4
+	teh-ar                         → uni062A
+	jeem-ar                        → uni062C
+	fathatan-ar                    → uni064B
+	uni20BA                        → uni20BA
+	khah-ar                        → uni062E
+	sheen-ar.medi                  → uniFEB8
+	thirdemspace                   → uni2004
+	tehMarbuta-ar                  → uni0629
+	tteh-ar.medi                   → uniFB69
+	ain-ar.fina                    → uniFECA
+	gaf-ar                         → uni06AF
+	feh-ar                         → uni0641
+	tildecmb                       → tildecomb
+	twodotshorizontalabove-ar      → uniFBB4
+	one-persian                    → uni06F1
+	zah-ar.init                    → uniFEC7
+	NUL                            → uni0000
+	servicemark                    → uni2120
+	hairspace                      → uni200A
+	sheen-ar.fina                  → uniFEB6
+	veh-ar.medi                    → uniFB6D
+	nine-ar                        → uni0669
+	qaf-ar                         → uni0642
+	one.sup                        → uni00B9
+	gaf-ar.medi                    → uniFB95
+	khah-ar.medi                   → uniFEA8
+	ddal-ar                        → uni0688
+	noon-ar.fina                   → uniFEE6
+	ghain-ar                       → uni063A
+	lam-ar.init                    → uniFEDF
+	lam-ar.medi                    → uniFEE0
+	tehMarbutagoal-ar              → uni06C3
+	yeh-ar.init                    → uniFEF3
+	feh-ar.medi                    → uniFED4
+	six-persian                    → uni06F6
+	won                            → uni20A9
+	tteh-ar                        → uni0679
+	yehbarree-ar.fina              → uniFBAF
+	lam_alefHamzabelow-ar          → uniFEF9
+	teh-ar.init                    → uniFE97
+	reh-ar                         → uni0631
+	seven-persian                  → uni06F7
+	yehbarree-ar                   → uni06D2
+	tenge                          → uni20B8
+	uni20BD                        → uni20BD
+	alefHamzaabove-ar.fina         → uniFE84
+	alefbelow-ar                   → uni0656
+	lam_alefHamzaabove-ar.fina     → uniFEF8
+	eight-persian                  → uni06F8
+	caroncmb                       → uni030C
+	veh-ar                         → uni06A4
+	yehHamzaabove-ar.init          → uniFE8B
+	khah-ar.init                   → uniFEA7
+	yeh-ar.fina                    → uniFEF2
+	yeh-farsi.medi                 → uniFBFF
+	threedotsupabove-ar            → uniFBB6
+	dal-ar.fina                    → uniFEAA
+	yeh-farsi.init                 → uniFBFE
+	meem-ar.init                   → uniFEE3
+	three-persian                  → uni06F3
+	seen-ar.init                   → uniFEB3
+	dotabove-ar                    → uniFBB2
+	qaf-ar.medi                    → uniFED8
+	ain-ar.medi                    → uniFECC
+	keheh-ar                       → uni06A9
+	veh-ar.init                    → uniFB6C
+	figurespace                    → uni2007
+	sad-ar.medi                    → uniFEBC
+	zain-ar.fina                   → uniFEB0
+	semicolon-ar                   → uni061B
+	acutecmb                       → acutecomb
+	peso                           → uni20B1
+	hehDoachashmee-ar              → uni06BE
+	yeh-farsi.fina                 → uniFBFD
+	hehgoal-ar.init                → uniFBA8
+	alefWasla-ar                   → uni0671
+	alefMadda-ar                   → uni0622
+	lam_alefHamzabelow-ar.fina     → uniFEFA
+	hamza-ar                       → uni0621
+	peh-ar                         → uni067E
+	ghain-ar.medi                  → uniFED0
+	two-ar                         → uni0662
+	alefMadda-ar.fina              → uniFE82
+	gaf-ar.init                    → uniFB94
+	three.sup                      → uni00B3
+	noon-ar                        → uni0646
+	sheqel                         → uni20AA
+	sheen-ar.init                  → uniFEB7
+	reh-ar.fina                    → uniFEAE
+	kaf-ar.medi                    → uniFEDC
+	quarteremspace                 → uni2005
+	four.sup                       → uni2074
+	sad-ar.fina                    → uniFEBA
+	five-ar                        → uni0665
+	uni20B9                        → uni20B9
+	enspace                        → uni2002
+	jeem-ar.fina                   → uniFE9E
+	tah-ar.init                    → uniFEC3
+	sheen-ar                       → uni0634
+	tteh-ar.fina                   → uniFB67
+	guillemetleft                  → guillemotleft
+	nine-persian                   → uni06F9
+	wawHamzaabove-ar.fina          → uniFE86
+	tah-ar                         → uni0637
+	zero-persian                   → uni06F0
+	alefHamzabelow-ar.fina         → uniFE88
+	hehDoachashmee-ar.init         → uniFBAC
+	rreh-ar.fina                   → uniFB8D
+	alefMaksura-ar.fina            → uniFEF0
+	khah-ar.fina                   → uniFEA6
+	kashida-ar                     → uni0640
+	sukun-ar                       → uni0652
+	tteh-ar.init                   → uniFB68
+	qafDotless-ar                  → uni066F
+	keheh-ar.init                  → uniFB90
+	hah-ar                         → uni062D
+	meem-ar                        → uni0645
+	thal-ar.fina                   → uniFEAC
+	rreh-ar                        → uni0691
+	hamzabelow-ar                  → uni0655
+	feh-ar.fina                    → uniFED2
+	five-persian                   → uni06F5
+	lam-ar.fina                    → uniFEDE
+	kasra-ar                       → uni0650
+	kasratan-ar                    → uni064D
+	sad-ar                         → uni0635
+	behDotless-ar                  → uni066E
+	noonghunnaabove-ar             → uni0658
+	dad-ar.medi                    → uniFEC0
+	peh-ar.init                    → uniFB58
+	shadda-ar                      → uni0651
+	hehDoachashmee-ar.medi         → uniFBAD
+	hehgoal-ar.medi                → uniFBA9
+	jeem-ar.medi                   → uniFEA0
+	beh-ar.medi                    → uniFE92
+	guillemetright                 → guillemotright
+	two-persian                    → uni06F2
+	lam_alef-ar                    → uniFEFB
+	seen-ar                        → uni0633
+	meem-ar.fina                   → uniFEE2
+	thinspace                      → uni2009
+	alefHamzaabove-ar              → uni0623
+	tcheh-ar.medi                  → uniFB7D
+	fatha-ar                       → uni064E
+	twodotleader                   → twodotenleader
+	two.sup                        → uni00B2
+	theh-ar                        → uni062B
+	meem-ar.medi                   → uniFEE4
+	noon-ar.medi                   → uniFEE8
+	alef-ar.fina                   → uniFE8E
+	yehHamzaabove-ar               → uni0626
+	hehgoal-ar.fina                → uniFBA7
+	feh-ar.init                    → uniFED3
+	theh-ar.medi                   → uniFE9C
+	eight-ar                       → uni0668
+	tcheh-ar.fina                  → uniFB7B
+	alefHamzabelow-ar              → uni0625
+	hah-ar.medi                    → uniFEA4
+	three-ar                       → uni0663
+	alefMaksura-ar                 → uni0649
+	asterisk-ar                    → uni066D
+	teh-ar.medi                    → uniFE98
+	ghain-ar.init                  → uniFECF
+	hamzaabove-ar                  → uni0654
+	qaf-ar.fina                    → uniFED6
+	madda-ar                       → uni0653
+	hehDoachashmee-ar.fina         → uniFBAB
+	tehMarbuta-ar.fina             → uniFE94
+	qaf-ar.init                    → uniFED7
+	noonghunna-ar.fina             → uniFB9F
+	fehDotless-ar                  → uni06A1
+	dad-ar.fina                    → uniFEBE
+	uni00A0                        → uni00A0
+	fl                             → uniFB02
+	waw-ar                         → uni0648
+	heh-ar                         → uni0647
+	dal-ar                         → uni062F
+	bahtthai                       → uni0E3F
+	percent-ar                     → uni066A
+	alefWasla-ar.fina              → uniFB51
+	zah-ar                         → uni0638
+	kaf-ar                         → uni0643
+	damma-ar                       → uni064F
+	heh-ar.init                    → uniFEEB
+	dad-ar.init                    → uniFEBF
+	zah-ar.medi                    → uniFEC8
+	zero-ar                        → uni0660
+	hryvnia                        → uni20B4
+	heh-ar.fina                    → uniFEEA
+	theh-ar.init                   → uniFE9B
+	hehgoalHamzaabove-ar           → uni06C2
+	lam_alefHamzaabove-ar          → uniFEF7
+	tcheh-ar.init                  → uniFB7C
+	yeh-ar                         → uni064A
+	four-persian                   → uni06F4
+	yeh-ar.medi                    → uniFEF4
+	tahabove-ar                    → uni0615
+	yeh-farsi                      → uni06CC
+	emspace                        → uni2003
+	yehbarreeHamzaabove-ar         → uni06D3
+	ringcmb                        → uni030A
+	lam_alefMadda-ar.fina          → uniFEF6
+	alef-ar                        → uni0627
+	heh-ar.medi                    → uniFEEC
+	keheh-ar.medi                  → uniFB91
+
+_________________________
+Glyphs with already-correct naming:
+	egrave
+	colon
+	D
+	bar
+	ae
+	ellipsis
+	ucircumflex
+	bracketright
+	k
+	one
+	AE
+	comma
+	quotedblright
+	zero
+	eight
+	Q
+	z
+	ocircumflex
+	three
+	B
+	Agrave
+	aring
+	notequal
+	greater
+	i
+	s
+	o
+	atilde
+	udieresis
+	l
+	G
+	oacute
+	eth
+	yen
+	P
+	N
+	copyright
+	exclam
+	otilde
+	V
+	g
+	idieresis
+	X
+	L
+	endash
+	acircumflex
+	ampersand
+	fraction
+	Icircumflex
+	Igrave
+	minus
+	zcaron
+	underscore
+	mu
+	e
+	figuredash
+	O
+	ydieresis
+	R
+	Yacute
+	multiply
+	igrave
+	Ocircumflex
+	emdash
+	Y
+	Ugrave
+	guilsinglleft
+	ordmasculine
+	caron
+	quotedblbase
+	E
+	hyphen
+	less
+	onehalf
+	edieresis
+	numbersign
+	A
+	ugrave
+	plus
+	quoteleft
+	adieresis
+	approxequal
+	t
+	periodcentered
+	five
+	section
+	J
+	space
+	W
+	acute
+	I
+	Eth
+	Ntilde
+	icircumflex
+	b
+	circumflex
+	threequarters
+	C
+	percent
+	quotedbl
+	oslash
+	dong
+	ecircumflex
+	Edieresis
+	Otilde
+	dagger
+	equal
+	quotesinglbase
+	nine
+	paragraph
+	daggerdbl
+	y
+	Eacute
+	dollar
+	w
+	Uacute
+	asciicircum
+	q
+	lessequal
+	ccedilla
+	question
+	ntilde
+	Atilde
+	semicolon
+	four
+	OE
+	braceleft
+	plusminus
+	F
+	Euro
+	cent
+	j
+	uacute
+	Ucircumflex
+	f
+	S
+	Z
+	r
+	Ccedilla
+	Egrave
+	registered
+	odieresis
+	divide
+	questiondown
+	Adieresis
+	degree
+	parenleft
+	seven
+	m
+	quotedblleft
+	exclamdown
+	thorn
+	Odieresis
+	Thorn
+	n
+	Ydieresis
+	at
+	Ograve
+	Oslash
+	H
+	trademark
+	slash
+	scaron
+	asterisk
+	asciitilde
+	bracketleft
+	Oacute
+	v
+	K
+	sterling
+	Zcaron
+	period
+	dieresis
+	braceright
+	eacute
+	Aacute
+	Udieresis
+	grave
+	quoteright
+	c
+	quotesingle
+	Ecircumflex
+	onequarter
+	greaterequal
+	two
+	ordfeminine
+	parenright
+	bullet
+	tilde
+	guilsinglright
+	p
+	backslash
+	x
+	oe
+	a
+	ograve
+	d
+	U
+	h
+	Scaron
+	iacute
+	Acircumflex
+	six
+	T
+	u
+	dotlessi
+	Idieresis
+	germandbls
+	Iacute
+	aacute
+	yacute
+	Aring
+	agrave
+	M
+
+_________________________
+Glyphs with no Unicode value:
+	hamzabelowKasratan-ar
+	yehHamzaabove-ar.init.wide
+	tteh-ar.medi.wide
+	two-ar.tab
+	shaddaKasratan-ar
+	Euro.tab
+	three-ar.tab
+	hamzaaboveDammatan-ar
+	shaddaFatha-ar
+	teh-ar.medi.wide
+	five.tab
+	teh-ar.init.wide
+	hamzaaboveDamma-ar
+	eight-ar.tab
+	nine-ar.tab
+	nine.tab
+	periodcentered.tab
+	dieresiscmb.cap
+	wasla-ar
+	five-ar.tab
+	middotcat.cap
+	behDotless-ar.fina
+	hamzaaboveSukun-ar
+	shaddaFathatan-ar
+	space.tab
+	caroncmb.cap
+	nine-persian.tab
+	fehDotless-ar.init
+	quotedbl.tab
+	hehgoalHamzaabove-ar.fina
+	six-ar.tab
+	seven.tab
+	hamzabelowKasra-ar
+	eight.tab
+	yen.tab
+	three.tab
+	dollar.tab
+	two.tab
+	yehHamzaabove-ar.medi.wide
+	sterling.tab
+	alef-ar.fina.short
+	two-persian.tab
+	shaddaDammatan-ar
+	lam_alefWasla-ar.fina
+	eight-persian.tab
+	colon.fig
+	acutecmb.cap
+	fehDotless-ar.medi
+	hamzaaboveFathatan-ar
+	yeh-ar.init.wide
+	behDotless-ar.medi_wide
+	dotcenter-ar
+	colon.figtab
+	four.tab
+	lam_alefWasla-ar
+	tildecmb.cap
+	middotcat
+	behDotless-ar.init
+	colon.tab
+	behDotless-ar.medi
+	theh-ar.init.wide
+	gafsarkashabove-ar
+	six-persian.tab
+	comma.tab
+	peh-ar.init.wide
+	four-ar.tab
+	behDotless-ar.init_wide
+	six.tab
+	fehDotless-ar.fina
+	peh-ar.medi.wide
+	shaddaKasra-ar
+	seven-ar.tab
+	three-persian.tab
+	gravecmb.cap
+	tehMarbutagoal-ar.fina
+	seven-persian.tab
+	yeh-ar.medi.wide
+	hamzaaboveFatha-ar
+	qafDotless-ar.fina
+	four-persian.tab
+	zero-ar.tab
+	theh-ar.medi.wide
+	one.tab
+	zero.tab
+	five-persian.tab
+	alef-ar.short
+	shaddaDamma-ar
+	tteh-ar.init.wide
+	period.tab
+	one-ar.tab
+	slash.tab
+	threedotsdownbelow-ar
+	.notdef
+	zero-persian.tab
+	quotesingle.tab
+	one-persian.tab
+	circumflexcmb.cap
