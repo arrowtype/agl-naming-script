@@ -50,28 +50,23 @@ def findProdNames(font):
                 if glyph.unicodes[0] > 65535:
                     report["Production names to set"][glyph.name] = f'u{glyph.unicodes[0]:0>6X}'
 
-                # TODO: check for ligated glyphs? These should have an underscore before the first period, e.g. f_l.ss01
-
-                # TODO: add "uni____" style name to actual glyph
+                # TODO? maybe check for ligated glyphs? These should have an underscore before the first period, e.g. 'uni20AC0308', mapped to the string U+20AC U+0308
 
         # if glyph has no Unicode value
         if glyph.unicodes == ():
             report["Glyphs with no Unicode value"].append(glyph.name)
-        
-        # TODO: update groups, kerning, features(?)
-        # TODO? if glyph has a name change, probably check for suffixed alts with previous name, then update those as well. print list
-
-        # TODO? Should this copy UFOs to new UFOs, to leave working names? Saga doesn’t need that.
-
-        # TODO: save changes to a txt file, next to UFO (and maybe give option of saving this in another dir)
 
     return report
 
 
-# def setProdnames(font,report):
+def addProdNamesToFontLib(font,report):
 
     ## this may be all that is needed??? FontMake may look for this and use it...
-    # font.lib["public.postscriptNames"] = mapping
+
+    mapping = report["Production names to set"]
+    font.lib["public.postscriptNames"] = mapping
+
+    font.save()
 
     # if not, look up how to change a glyph name, including name, groups, kerning
 
@@ -134,43 +129,17 @@ if __name__ == "__main__":
     for fileName in os.listdir(args.ufoDir):
         if fileName.endswith(".ufo"):
             ufoPath = os.path.join(args.ufoDir, fileName)
-            font = Font(ufoPath, showInterface=False)
+
+            # open the font in memory
+            font = Font(ufoPath)
 
             # a place to store changes made, then report these later
             report = findProdNames(font)
 
-            # TODO: set prod names
-            # setProdNames(font, report)
+            # 
+            addProdNamesToFontLib(font, report)
 
             # write report of changes applied to UFO
             reportPath = ufoPath.replace(".ufo",".prod_names.txt")
             saveReport(reportPath, report)
 
-
-
-
-
-# print("\n\n")
-# print("--------------------------------------------------")
-# print("FONT:", font.info.familyName, font.info.styleName)
-
-# print("\nGlyph Names already set correctly:")
-# print("\t", end="")
-# for name in alreadyGood:
-#     print(f"/{name}", end=" ")
-
-# print("\n\nIn AGL:")
-# for name, newName in toAdjust.items():
-#     print(f"\t{name.ljust(31,'_')} {newName}")
-
-# print("\nNot in AGL:")
-# for name, newName in uniNames.items():
-#     print(f"\t{name.ljust(31,'_')} {newName}")
-
-
-# print("\nSkipped glyphs (no Unicode value set):")
-# print("\t", end="")
-# for name in skippedGlyphs:
-#     print(f"/{name}", end=" ")
-
-# print("\n\n")
