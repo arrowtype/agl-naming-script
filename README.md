@@ -1,6 +1,8 @@
 # Set Production Names
 
-A script to run through UFOs and apply production names to glyphs, in order to ensure they work well in PDFs, PostScript printing, etc.
+A script to run through UFOs and determine production names for glyphs, which are necessary in order to ensure they work well in PDFs, PostScript printing, etc..
+
+Once the appropriate production names are determined, they are then saved in the `font.lib` key `public.postscriptNames`. This lib key is then used by FontMake to apply production names to glyphs, but the glyphs keep their “working names” in the UFO.
 
 The AGL (Adobe Glyph List) Specification provides a list of acceptable names for glyphs, which are needed for some contexts. This includes: 
 - Easy-to-read names for Latin
@@ -11,7 +13,6 @@ The AGL (Adobe Glyph List) Specification provides a list of acceptable names for
 See https://silnrsi.github.io/FDBP/en-US/Glyph_Naming.html for details on working vs production glyph names.
 
 See https://github.com/adobe-type-tools/agl-specification for the AGL spec.
-
 
 ## Usage
 
@@ -57,6 +58,16 @@ python3 script/set-prod-names.py -u sources
 ...where `sources` points to a directory which includes `.ufo`s (at the top level) in which you want to set production glyph names.
 
 This will update the glyph names in the UFOs – including in `groups.plist` and `kerning.plist`, but not in `features.fea`.
+
+### If you need a font file with the names applied...
+
+You can run FontMake on the UFO to apply the `public.postscriptNames` mapping, e.g.:
+
+```bash
+fontmake -o otf -u sources/TextAR-Light.ufo --output-dir sources/otf
+```
+
+But, if this doesn’t work for the particular project, the script could be extended to add names directly to the UFO.
 
 ## Project support
 
