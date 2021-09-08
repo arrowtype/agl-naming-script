@@ -1,5 +1,9 @@
 """
     Go through glyphs in a UFO font source and apply AGL (Adobe Glyph List) names, based on Unicode values.
+
+    Current assumptions:
+    - Fonts do not have glyphs that are ligated (which would need names like 'uni20AC0308', mapped to the string U+20AC U+0308)
+    
 """
 
 from fontTools import agl
@@ -28,8 +32,13 @@ for glyph in font:
             # add it to a dict to correct below
             uniNames[glyph.name] = f'uni{glyph.unicodes[0]:0>4X}'
 
+            # if hex is above the range 0000–FFFF, it must be named differently, with a u000000 format
+            if glyph.unicodes[0] > 65535:
+                uniNames[glyph.name] = f'u{glyph.unicodes[0]:0>6X}'
 
-            # TODO: add "uni____" style name
+            # TODO: check for ligated glyphs? These should have an underscore before the first period, e.g. f_l.ss01
+
+            # TODO: add "uni____" style name to actual glyph
 
     else:
         skippedGlyphs.append(glyph.name)
@@ -37,7 +46,9 @@ for glyph in font:
     # TODO: update groups, kerning, features(?)
     # TODO? if glyph has a name change, probably check for suffixed alts with previous name, then update those as well. print list
 
-    # TODO? Should this copy UFOs to new UFOs, to leave working names?
+    # TODO? Should this copy UFOs to new UFOs, to leave working names? Saga doesn’t need that.
+
+    # TODO: save changes to a txt file, next to UFO (and maybe give option of saving this in another dir)
 
 print("\n\n")
 print("--------------------------------------------------")
