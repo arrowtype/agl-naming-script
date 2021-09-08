@@ -28,6 +28,8 @@ def findProdNames(font):
     report["Glyphs with no Unicode value"] = []
 
     for glyph in font:
+
+        # if glyph has Unicode value
         if glyph.unicodes != ():
             try:
                 # check if existing name matches the AGL name
@@ -52,7 +54,8 @@ def findProdNames(font):
 
                 # TODO: add "uni____" style name to actual glyph
 
-        else:
+        # if glyph has no Unicode value
+        if glyph.unicodes == ():
             report["Glyphs with no Unicode value"].append(glyph.name)
         
         # TODO: update groups, kerning, features(?)
@@ -62,10 +65,15 @@ def findProdNames(font):
 
         # TODO: save changes to a txt file, next to UFO (and maybe give option of saving this in another dir)
 
-        return report
+    return report
 
 
-# def recordChanges(font, good, skip, fix):
+# def setProdnames(font,report):
+
+    ## this may be all that is needed??? FontMake may look for this and use it...
+    # font.lib["public.postscriptNames"] = mapping
+
+    # if not, look up how to change a glyph name, including name, groups, kerning
 
 
 def saveReport(path, report):
@@ -76,8 +84,33 @@ def saveReport(path, report):
     *path* is a `string` of the path to write to
     """
 
-    print(reportPath)
-    print(report)
+    seperator = "\n_________________________"
+
+    final_report = [f"{path.split('.')[0]}.ufo", seperator, "Production names set:"]
+    if report["Production names to set"]:
+        for oldName, newName in report["Production names to set"].items():
+            final_report.append(f"\t{oldName.ljust(31)}→ {newName}")
+    else:
+        final_report.append("No names needed setting!")
+
+    final_report.append(seperator)
+    final_report.append("Glyphs with already-correct naming:")
+    if report["Glyphs with already-correct naming"]:
+        for name in report["Glyphs with already-correct naming"]:
+            final_report.append(f"\t{name}")
+    else:
+        final_report.append("No glyphs had already-correct names.")
+
+    final_report.append(seperator)
+    final_report.append("Glyphs with no Unicode value:")
+    if report["Glyphs with no Unicode value"]:
+        for name in report["Glyphs with no Unicode value"]:
+            final_report.append(f"\t{name}")
+    else:
+        final_report.append("No glyphs had no unicode values.")
+
+    with open(path, "w") as reportDoc:
+        reportDoc.write("\n".join(final_report))
 
 
 if __name__ == "__main__":
@@ -103,15 +136,14 @@ if __name__ == "__main__":
             ufoPath = os.path.join(args.ufoDir, fileName)
             font = Font(ufoPath, showInterface=False)
 
-
             # a place to store changes made, then report these later
-            report = findProdNames(font, report)
+            report = findProdNames(font)
 
             # TODO: set prod names
             # setProdNames(font, report)
 
             # write report of changes applied to UFO
-            reportPath = ufoPath.replace(".ufo","prod_name_changes.txt")
+            reportPath = ufoPath.replace(".ufo",".prod_names.txt")
             saveReport(reportPath, report)
 
 
