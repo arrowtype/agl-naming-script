@@ -1,76 +1,144 @@
 """
-    Go through glyphs in a UFO font source and apply AGL (Adobe Glyph List) names, based on Unicode values.
+    Goes through glyphs in a UFO font source and applies AGL (Adobe Glyph List) names, based on Unicode values.
+
+    Run on the command line, pointing to a folder containing UFOs. See README for details.
+
+        python3 script/set-prod-names.py -u sources
 
     Current assumptions:
     - Fonts do not have glyphs that are ligated (which would need names like 'uni20AC0308', mapped to the string U+20AC U+0308)
     
 """
 
+from fontParts.fontshell import RFont as Font
 from fontTools import agl
+import argparse
+import os
 
-font = CurrentFont()
 
-alreadyGood = []
-toAdjust = {}
-uniNames = {}
-skippedGlyphs = []
+def findProdNames(font):
+    """
+        Sets glyph names according to AGL spec.
+    """
 
-for glyph in font:
-    if glyph.unicodes != ():
-        try:
-            # check if existing name matches the AGL name
-            if glyph.name == agl.UV2AGL[glyph.unicodes[0]]:
-                alreadyGood.append(glyph.name)
+    # setting up report to store changes
+    report = {}
+    report["Production names to set"] = {}
+    report["Glyphs with already-correct naming"] = []
+    report["Glyphs with no Unicode value"] = []
 
-            # if not, add it to a dict to correct below
-            else:
-                toAdjust[glyph.name] = agl.UV2AGL[glyph.unicodes[0]]
+    for glyph in font:
+        if glyph.unicodes != ():
+            try:
+                # check if existing name matches the AGL name
+                if glyph.name == agl.UV2AGL[glyph.unicodes[0]]:
+                    report["Glyphs with already-correct naming"].append(glyph.name)
 
-        # catch if name doesn’t match a name in AGL, then give a "uni____" name
-        # formatting help: https://gist.github.com/arrowtype/713dad14fe9a574d58d1aab61ba9b2f0#gistcomment-3234771
-        except KeyError:
-            # add it to a dict to correct below
-            uniNames[glyph.name] = f'uni{glyph.unicodes[0]:0>4X}'
+                # if not, add it to a dict to correct below
+                else:
+                    report["Production names to set"][glyph.name] = agl.UV2AGL[glyph.unicodes[0]]
 
-            # if hex is above the range 0000–FFFF, it must be named differently, with a u000000 format
-            if glyph.unicodes[0] > 65535:
-                uniNames[glyph.name] = f'u{glyph.unicodes[0]:0>6X}'
+            # catch if name doesn’t match a name in AGL, then give a "uni____" name
+            # formatting help: https://gist.github.com/arrowtype/713dad14fe9a574d58d1aab61ba9b2f0#gistcomment-3234771
+            except KeyError:
+                # add it to a dict to correct below
+                report["Production names to set"][glyph.name] = f'uni{glyph.unicodes[0]:0>4X}'
 
-            # TODO: check for ligated glyphs? These should have an underscore before the first period, e.g. f_l.ss01
+                # if hex is above the range 0000–FFFF, it must be named differently, with a u000000 format
+                if glyph.unicodes[0] > 65535:
+                    report["Production names to set"][glyph.name] = f'u{glyph.unicodes[0]:0>6X}'
 
-            # TODO: add "uni____" style name to actual glyph
+                # TODO: check for ligated glyphs? These should have an underscore before the first period, e.g. f_l.ss01
 
-    else:
-        skippedGlyphs.append(glyph.name)
+                # TODO: add "uni____" style name to actual glyph
+
+        else:
+            report["Glyphs with no Unicode value"].append(glyph.name)
+        
+        # TODO: update groups, kerning, features(?)
+        # TODO? if glyph has a name change, probably check for suffixed alts with previous name, then update those as well. print list
+
+        # TODO? Should this copy UFOs to new UFOs, to leave working names? Saga doesn’t need that.
+
+        # TODO: save changes to a txt file, next to UFO (and maybe give option of saving this in another dir)
+
+        return report
+
+
+# def recordChanges(font, good, skip, fix):
+
+
+def saveReport(path, report):
+    """
+    Writes out the report text file from the report dictionary to
+    the given *path*.
+
+    *path* is a `string` of the path to write to
+    """
+
+    print(reportPath)
+    print(report)
+
+
+if __name__ == "__main__":
+
+
+    description = """
+        Goes through glyphs in a UFO font source and applies AGL (Adobe Glyph List) names, based on Unicode values.
+    """
+    parser = argparse.ArgumentParser(description=description)
+
+    parser.add_argument("-u","--ufoDir",
+                    default="sources",
+                    help="Relative path in which you have UFOs you want to edit.")
+
+    args = parser.parse_args()
     
-    # TODO: update groups, kerning, features(?)
-    # TODO? if glyph has a name change, probably check for suffixed alts with previous name, then update those as well. print list
+    
+    # fontPaths = [get UFOs in dir]
 
-    # TODO? Should this copy UFOs to new UFOs, to leave working names? Saga doesn’t need that.
-
-    # TODO: save changes to a txt file, next to UFO (and maybe give option of saving this in another dir)
-
-print("\n\n")
-print("--------------------------------------------------")
-print("FONT:", font.info.familyName, font.info.styleName)
-
-print("\nGlyph Names already set correctly:")
-print("\t", end="")
-for name in alreadyGood:
-    print(f"/{name}", end=" ")
-
-print("\n\nIn AGL:")
-for name, newName in toAdjust.items():
-    print(f"\t{name.ljust(31,'_')} {newName}")
-
-print("\nNot in AGL:")
-for name, newName in uniNames.items():
-    print(f"\t{name.ljust(31,'_')} {newName}")
+    # open each UFO, then manipulate it
+    for fileName in os.listdir(args.ufoDir):
+        if fileName.endswith(".ufo"):
+            ufoPath = os.path.join(args.ufoDir, fileName)
+            font = Font(ufoPath, showInterface=False)
 
 
-print("\nSkipped glyphs (no Unicode value set):")
-print("\t", end="")
-for name in skippedGlyphs:
-    print(f"/{name}", end=" ")
+            # a place to store changes made, then report these later
+            report = findProdNames(font, report)
 
-print("\n\n")
+            # TODO: set prod names
+            # setProdNames(font, report)
+
+            # write report of changes applied to UFO
+            reportPath = ufoPath.replace(".ufo","prod_name_changes.txt")
+            saveReport(reportPath, report)
+
+
+
+
+
+# print("\n\n")
+# print("--------------------------------------------------")
+# print("FONT:", font.info.familyName, font.info.styleName)
+
+# print("\nGlyph Names already set correctly:")
+# print("\t", end="")
+# for name in alreadyGood:
+#     print(f"/{name}", end=" ")
+
+# print("\n\nIn AGL:")
+# for name, newName in toAdjust.items():
+#     print(f"\t{name.ljust(31,'_')} {newName}")
+
+# print("\nNot in AGL:")
+# for name, newName in uniNames.items():
+#     print(f"\t{name.ljust(31,'_')} {newName}")
+
+
+# print("\nSkipped glyphs (no Unicode value set):")
+# print("\t", end="")
+# for name in skippedGlyphs:
+#     print(f"/{name}", end=" ")
+
+# print("\n\n")
