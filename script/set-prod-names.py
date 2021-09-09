@@ -91,10 +91,15 @@ def saveReport(path, report):
     seperator = "\n---------------------------------------------------"
 
     final_report = ["PRODUCTION NAMING REPORT\n", f"{path.split('.')[0]}.ufo", seperator, "Production names set:\n"]
-    final_report.append(f"    {'CODEPOINT'.rjust(9)} : {'WORKING NAME'.ljust(31)} → PROD NAME\n")
+    final_report.append(f"    {'PROD NAME'.rjust(16)} : {'UNICODE'.ljust(7)} • {'WORKING NAME'.ljust(31)}\n")
     if report["Prod Names with Codepoints"]:
         for codepoint, oldNameNewName in sorted(report["Prod Names with Codepoints"].items()):
-            final_report.append(f"    {str(codepoint).rjust(9)} : {oldNameNewName[0].ljust(31)} → {oldNameNewName[1]}")
+            if codepoint > 65535:
+                hexUnicode = f'{codepoint:0>6X}'
+            else:
+                hexUnicode = f'{codepoint:0>4X}'
+            # final_report.append(f"    {hexUnicode.rjust(9)} : {oldNameNewName[0].ljust(31)} → {oldNameNewName[1]}")
+            final_report.append(f"    {oldNameNewName[1].rjust(16)} : {hexUnicode.ljust(7)} • {oldNameNewName[0].ljust(31)}")
     else:
         final_report.append("No names needed setting!")
 
